@@ -1,0 +1,21 @@
+module operador(
+input logic [3:0] A,
+input logic [3:0] B,
+input logic [1:0] OP,
+output logic [6:0] result);
+
+always@(A, B, OP)
+begin
+	case (OP)
+		
+		2'b01 : result <= A+B
+
+		2'b10 : result <= A-B
+		
+		2'b11 : result <= A*B
+		
+		default : result <= 7'b0
+	endcase
+end	
+
+endmodule

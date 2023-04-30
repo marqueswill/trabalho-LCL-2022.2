@@ -1,0 +1,28 @@
+module ROM(
+input  logic [3:0] crnt,
+input  logic [3:0] tecla,
+output logic [3:0] next);
+
+always @(*)
+	begin
+		case (crnt)
+			
+			2'b 00:
+				begin
+					if 
+				end
+				
+			2'b 01:
+				begin
+				end
+			
+			2'b 10:
+				begin
+				end
+				
+			2'b 11:
+				begin
+				end
+		
+		endcase
+	end

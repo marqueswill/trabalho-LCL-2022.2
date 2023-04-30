@@ -1,0 +1,11 @@
+module ROM_KEY(
+input logic KEY,
+output logic E);
+
+always @(KEY)
+	if (KEY)
+		E <= 1;
+		
+	else
+		E <= 0;
+		

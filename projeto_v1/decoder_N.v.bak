@@ -1,0 +1,9 @@
+module decoder_N(
+	input logic [3:0]  N,
+	output logic [3:0] LED,		
+	output logic [6:0] HEX);
+	
+assign LED = N;
+decoder7 inst(.In(N),.Out(HEX));
+
+endmodule

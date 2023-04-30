@@ -1,0 +1,2150 @@
+TimeQuest Timing Analyzer report for projeto_final
+Tue Feb 14 09:18:21 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLOCK_50'
+ 12. Slow Model Hold: 'CLOCK_50'
+ 13. Slow Model Minimum Pulse Width: 'CLOCK_50'
+ 14. Slow Model Minimum Pulse Width: 'maquina:inst|inst'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Propagation Delay
+ 20. Minimum Propagation Delay
+ 21. Fast Model Setup Summary
+ 22. Fast Model Hold Summary
+ 23. Fast Model Recovery Summary
+ 24. Fast Model Removal Summary
+ 25. Fast Model Minimum Pulse Width Summary
+ 26. Fast Model Setup: 'CLOCK_50'
+ 27. Fast Model Hold: 'CLOCK_50'
+ 28. Fast Model Minimum Pulse Width: 'CLOCK_50'
+ 29. Fast Model Minimum Pulse Width: 'maquina:inst|inst'
+ 30. Setup Times
+ 31. Hold Times
+ 32. Clock to Output Times
+ 33. Minimum Clock to Output Times
+ 34. Propagation Delay
+ 35. Minimum Propagation Delay
+ 36. Multicorner Timing Analysis Summary
+ 37. Setup Times
+ 38. Hold Times
+ 39. Clock to Output Times
+ 40. Minimum Clock to Output Times
+ 41. Progagation Delay
+ 42. Minimum Progagation Delay
+ 43. Setup Transfers
+ 44. Hold Transfers
+ 45. Report TCCS
+ 46. Report RSKM
+ 47. Unconstrained Paths
+ 48. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; projeto_final                                                     ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                               ;
++-------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------+
+; Clock Name        ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets               ;
++-------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------+
+; CLOCK_50          ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 }          ;
+; maquina:inst|inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { maquina:inst|inst } ;
++-------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                   ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 843.88 MHz ; 420.17 MHz      ; CLOCK_50   ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------+
+; Slow Model Setup Summary          ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; CLOCK_50 ; -0.185 ; -0.185        ;
++----------+--------+---------------+
+
+
++-----------------------------------+
+; Slow Model Hold Summary           ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; CLOCK_50 ; -3.303 ; -6.432        ;
++----------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++--------------------------------------------+
+; Slow Model Minimum Pulse Width Summary     ;
++-------------------+--------+---------------+
+; Clock             ; Slack  ; End Point TNS ;
++-------------------+--------+---------------+
+; CLOCK_50          ; -1.380 ; -3.380        ;
+; maquina:inst|inst ; 0.500  ; 0.000         ;
++-------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLOCK_50'                                                                                                ;
++--------+--------------------+--------------------+-------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock      ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+-------------------+-------------+--------------+------------+------------+
+; -0.185 ; maquina:inst|inst2 ; maquina:inst|inst  ; CLOCK_50          ; CLOCK_50    ; 1.000        ; 0.000      ; 1.221      ;
+; 0.379  ; maquina:inst|inst2 ; maquina:inst|inst2 ; CLOCK_50          ; CLOCK_50    ; 1.000        ; 0.000      ; 0.657      ;
+; 2.340  ; maquina:inst|inst  ; maquina:inst|inst  ; maquina:inst|inst ; CLOCK_50    ; 0.500        ; 3.444      ; 1.890      ;
+; 2.840  ; maquina:inst|inst  ; maquina:inst|inst  ; maquina:inst|inst ; CLOCK_50    ; 1.000        ; 3.444      ; 1.890      ;
+; 3.399  ; maquina:inst|inst  ; maquina:inst|inst2 ; maquina:inst|inst ; CLOCK_50    ; 0.500        ; 3.444      ; 0.831      ;
+; 3.899  ; maquina:inst|inst  ; maquina:inst|inst2 ; maquina:inst|inst ; CLOCK_50    ; 1.000        ; 3.444      ; 0.831      ;
++--------+--------------------+--------------------+-------------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLOCK_50'                                                                                                 ;
++--------+--------------------+--------------------+-------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock      ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+-------------------+-------------+--------------+------------+------------+
+; -3.303 ; maquina:inst|inst  ; maquina:inst|inst  ; maquina:inst|inst ; CLOCK_50    ; 0.000        ; 3.444      ; 0.657      ;
+; -3.129 ; maquina:inst|inst  ; maquina:inst|inst2 ; maquina:inst|inst ; CLOCK_50    ; 0.000        ; 3.444      ; 0.831      ;
+; -2.803 ; maquina:inst|inst  ; maquina:inst|inst  ; maquina:inst|inst ; CLOCK_50    ; -0.500       ; 3.444      ; 0.657      ;
+; -2.629 ; maquina:inst|inst  ; maquina:inst|inst2 ; maquina:inst|inst ; CLOCK_50    ; -0.500       ; 3.444      ; 0.831      ;
+; 0.391  ; maquina:inst|inst2 ; maquina:inst|inst2 ; CLOCK_50          ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.955  ; maquina:inst|inst2 ; maquina:inst|inst  ; CLOCK_50          ; CLOCK_50    ; 0.000        ; 0.000      ; 1.221      ;
++--------+--------------------+--------------------+-------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLOCK_50'                                                             ;
++--------+--------------+----------------+------------------+----------+------------+--------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target             ;
++--------+--------------+----------------+------------------+----------+------------+--------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; maquina:inst|inst  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; maquina:inst|inst  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; maquina:inst|inst2 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; maquina:inst|inst2 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50|combout   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50|combout   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; inst|inst2|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; inst|inst2|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; inst|inst|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; inst|inst|clk      ;
++--------+--------------+----------------+------------------+----------+------------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'maquina:inst|inst'                                                                               ;
++-------+--------------+----------------+------------------+-------------------+------------+---------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock             ; Clock Edge ; Target                                ;
++-------+--------------+----------------+------------------+-------------------+------------+---------------------------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~0clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~0clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~0clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~0clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~0|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~0|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~0|datad           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~0|datad           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; inst|inst1|Decoder1~1clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; inst|inst1|Decoder1~1clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; inst|inst1|Decoder1~1clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; inst|inst1|Decoder1~1clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; inst|inst1|Decoder1~1|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; inst|inst1|Decoder1~1|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~1|datad           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~1|datad           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~2|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~2|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~2|datad           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~2|datad           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|E|datad                    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|E|datad                    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|N1[0]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|N1[0]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|N1[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|N1[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|N1[2]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|N1[2]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|N1[3]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|N1[3]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; inst|inst1|N2[0]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; inst|inst1|N2[0]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; inst|inst1|N2[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; inst|inst1|N2[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; inst|inst1|N2[2]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; inst|inst1|N2[2]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; inst|inst1|N2[3]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; inst|inst1|N2[3]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|OP[0]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|OP[0]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|OP[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|OP[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|OP[2]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|OP[2]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|OP[3]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|OP[3]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|OP[3]~0clkctrl|inclk[0]    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|OP[3]~0clkctrl|inclk[0]    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|OP[3]~0clkctrl|outclk      ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|OP[3]~0clkctrl|outclk      ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|OP[3]~0|combout            ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|OP[3]~0|combout            ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|OP[3]~0|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|OP[3]~0|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst|regout                      ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst|regout                      ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; maquina:inst|ROM:inst1|E              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; maquina:inst|ROM:inst1|E              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N1[0]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N1[0]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N1[1]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N1[1]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N1[2]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N1[2]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N1[3]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N1[3]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N2[0]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N2[0]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N2[1]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N2[1]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N2[2]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N2[2]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N2[3]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N2[3]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; maquina:inst|ROM:inst1|OP[0]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; maquina:inst|ROM:inst1|OP[0]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; maquina:inst|ROM:inst1|OP[1]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; maquina:inst|ROM:inst1|OP[1]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; maquina:inst|ROM:inst1|OP[2]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; maquina:inst|ROM:inst1|OP[2]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; maquina:inst|ROM:inst1|OP[3]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; maquina:inst|ROM:inst1|OP[3]          ;
++-------+--------------+----------------+------------------+-------------------+------------+---------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Setup Times                                                                      ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; Data Port ; Clock Port        ; Rise   ; Fall   ; Clock Edge ; Clock Reference   ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; SW[*]     ; CLOCK_50          ; 11.980 ; 11.980 ; Rise       ; CLOCK_50          ;
+;  SW[0]    ; CLOCK_50          ; 6.301  ; 6.301  ; Rise       ; CLOCK_50          ;
+;  SW[1]    ; CLOCK_50          ; 6.693  ; 6.693  ; Rise       ; CLOCK_50          ;
+;  SW[2]    ; CLOCK_50          ; 5.930  ; 5.930  ; Rise       ; CLOCK_50          ;
+;  SW[3]    ; CLOCK_50          ; 6.481  ; 6.481  ; Rise       ; CLOCK_50          ;
+;  SW[4]    ; CLOCK_50          ; 5.548  ; 5.548  ; Rise       ; CLOCK_50          ;
+;  SW[5]    ; CLOCK_50          ; 6.567  ; 6.567  ; Rise       ; CLOCK_50          ;
+;  SW[6]    ; CLOCK_50          ; 6.328  ; 6.328  ; Rise       ; CLOCK_50          ;
+;  SW[7]    ; CLOCK_50          ; 6.189  ; 6.189  ; Rise       ; CLOCK_50          ;
+;  SW[8]    ; CLOCK_50          ; 6.675  ; 6.675  ; Rise       ; CLOCK_50          ;
+;  SW[9]    ; CLOCK_50          ; 7.573  ; 7.573  ; Rise       ; CLOCK_50          ;
+;  SW[10]   ; CLOCK_50          ; 7.108  ; 7.108  ; Rise       ; CLOCK_50          ;
+;  SW[11]   ; CLOCK_50          ; 8.380  ; 8.380  ; Rise       ; CLOCK_50          ;
+;  SW[12]   ; CLOCK_50          ; 7.719  ; 7.719  ; Rise       ; CLOCK_50          ;
+;  SW[13]   ; CLOCK_50          ; 11.690 ; 11.690 ; Rise       ; CLOCK_50          ;
+;  SW[14]   ; CLOCK_50          ; 11.980 ; 11.980 ; Rise       ; CLOCK_50          ;
+;  SW[15]   ; CLOCK_50          ; 11.278 ; 11.278 ; Rise       ; CLOCK_50          ;
+; SW[*]     ; maquina:inst|inst ; 14.039 ; 14.039 ; Rise       ; maquina:inst|inst ;
+;  SW[0]    ; maquina:inst|inst ; 8.530  ; 8.530  ; Rise       ; maquina:inst|inst ;
+;  SW[1]    ; maquina:inst|inst ; 8.752  ; 8.752  ; Rise       ; maquina:inst|inst ;
+;  SW[2]    ; maquina:inst|inst ; 7.989  ; 7.989  ; Rise       ; maquina:inst|inst ;
+;  SW[3]    ; maquina:inst|inst ; 8.710  ; 8.710  ; Rise       ; maquina:inst|inst ;
+;  SW[4]    ; maquina:inst|inst ; 7.777  ; 7.777  ; Rise       ; maquina:inst|inst ;
+;  SW[5]    ; maquina:inst|inst ; 8.796  ; 8.796  ; Rise       ; maquina:inst|inst ;
+;  SW[6]    ; maquina:inst|inst ; 8.557  ; 8.557  ; Rise       ; maquina:inst|inst ;
+;  SW[7]    ; maquina:inst|inst ; 8.418  ; 8.418  ; Rise       ; maquina:inst|inst ;
+;  SW[8]    ; maquina:inst|inst ; 8.734  ; 8.734  ; Rise       ; maquina:inst|inst ;
+;  SW[9]    ; maquina:inst|inst ; 9.632  ; 9.632  ; Rise       ; maquina:inst|inst ;
+;  SW[10]   ; maquina:inst|inst ; 9.167  ; 9.167  ; Rise       ; maquina:inst|inst ;
+;  SW[11]   ; maquina:inst|inst ; 10.439 ; 10.439 ; Rise       ; maquina:inst|inst ;
+;  SW[12]   ; maquina:inst|inst ; 9.778  ; 9.778  ; Rise       ; maquina:inst|inst ;
+;  SW[13]   ; maquina:inst|inst ; 13.749 ; 13.749 ; Rise       ; maquina:inst|inst ;
+;  SW[14]   ; maquina:inst|inst ; 14.039 ; 14.039 ; Rise       ; maquina:inst|inst ;
+;  SW[15]   ; maquina:inst|inst ; 13.337 ; 13.337 ; Rise       ; maquina:inst|inst ;
+; SW[*]     ; maquina:inst|inst ; 14.918 ; 14.918 ; Fall       ; maquina:inst|inst ;
+;  SW[0]    ; maquina:inst|inst ; 9.272  ; 9.272  ; Fall       ; maquina:inst|inst ;
+;  SW[1]    ; maquina:inst|inst ; 9.631  ; 9.631  ; Fall       ; maquina:inst|inst ;
+;  SW[2]    ; maquina:inst|inst ; 8.868  ; 8.868  ; Fall       ; maquina:inst|inst ;
+;  SW[3]    ; maquina:inst|inst ; 9.452  ; 9.452  ; Fall       ; maquina:inst|inst ;
+;  SW[4]    ; maquina:inst|inst ; 8.519  ; 8.519  ; Fall       ; maquina:inst|inst ;
+;  SW[5]    ; maquina:inst|inst ; 9.538  ; 9.538  ; Fall       ; maquina:inst|inst ;
+;  SW[6]    ; maquina:inst|inst ; 9.299  ; 9.299  ; Fall       ; maquina:inst|inst ;
+;  SW[7]    ; maquina:inst|inst ; 9.160  ; 9.160  ; Fall       ; maquina:inst|inst ;
+;  SW[8]    ; maquina:inst|inst ; 9.613  ; 9.613  ; Fall       ; maquina:inst|inst ;
+;  SW[9]    ; maquina:inst|inst ; 10.511 ; 10.511 ; Fall       ; maquina:inst|inst ;
+;  SW[10]   ; maquina:inst|inst ; 10.046 ; 10.046 ; Fall       ; maquina:inst|inst ;
+;  SW[11]   ; maquina:inst|inst ; 11.318 ; 11.318 ; Fall       ; maquina:inst|inst ;
+;  SW[12]   ; maquina:inst|inst ; 10.657 ; 10.657 ; Fall       ; maquina:inst|inst ;
+;  SW[13]   ; maquina:inst|inst ; 14.628 ; 14.628 ; Fall       ; maquina:inst|inst ;
+;  SW[14]   ; maquina:inst|inst ; 14.918 ; 14.918 ; Fall       ; maquina:inst|inst ;
+;  SW[15]   ; maquina:inst|inst ; 14.216 ; 14.216 ; Fall       ; maquina:inst|inst ;
++-----------+-------------------+--------+--------+------------+-------------------+
+
+
++----------------------------------------------------------------------------------+
+; Hold Times                                                                       ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; Data Port ; Clock Port        ; Rise   ; Fall   ; Clock Edge ; Clock Reference   ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; SW[*]     ; CLOCK_50          ; -0.748 ; -0.748 ; Rise       ; CLOCK_50          ;
+;  SW[0]    ; CLOCK_50          ; -2.816 ; -2.816 ; Rise       ; CLOCK_50          ;
+;  SW[1]    ; CLOCK_50          ; -2.762 ; -2.762 ; Rise       ; CLOCK_50          ;
+;  SW[2]    ; CLOCK_50          ; -2.426 ; -2.426 ; Rise       ; CLOCK_50          ;
+;  SW[3]    ; CLOCK_50          ; -0.823 ; -0.823 ; Rise       ; CLOCK_50          ;
+;  SW[4]    ; CLOCK_50          ; -0.962 ; -0.962 ; Rise       ; CLOCK_50          ;
+;  SW[5]    ; CLOCK_50          ; -1.344 ; -1.344 ; Rise       ; CLOCK_50          ;
+;  SW[6]    ; CLOCK_50          ; -0.748 ; -0.748 ; Rise       ; CLOCK_50          ;
+;  SW[7]    ; CLOCK_50          ; -3.007 ; -3.007 ; Rise       ; CLOCK_50          ;
+;  SW[8]    ; CLOCK_50          ; -2.605 ; -2.605 ; Rise       ; CLOCK_50          ;
+;  SW[9]    ; CLOCK_50          ; -2.944 ; -2.944 ; Rise       ; CLOCK_50          ;
+;  SW[10]   ; CLOCK_50          ; -2.842 ; -2.842 ; Rise       ; CLOCK_50          ;
+;  SW[11]   ; CLOCK_50          ; -3.004 ; -3.004 ; Rise       ; CLOCK_50          ;
+;  SW[12]   ; CLOCK_50          ; -2.636 ; -2.636 ; Rise       ; CLOCK_50          ;
+;  SW[13]   ; CLOCK_50          ; -6.318 ; -6.318 ; Rise       ; CLOCK_50          ;
+;  SW[14]   ; CLOCK_50          ; -6.341 ; -6.341 ; Rise       ; CLOCK_50          ;
+;  SW[15]   ; CLOCK_50          ; -7.028 ; -7.028 ; Rise       ; CLOCK_50          ;
+; SW[*]     ; maquina:inst|inst ; -1.692 ; -1.692 ; Rise       ; maquina:inst|inst ;
+;  SW[0]    ; maquina:inst|inst ; -4.099 ; -4.099 ; Rise       ; maquina:inst|inst ;
+;  SW[1]    ; maquina:inst|inst ; -3.706 ; -3.706 ; Rise       ; maquina:inst|inst ;
+;  SW[2]    ; maquina:inst|inst ; -3.370 ; -3.370 ; Rise       ; maquina:inst|inst ;
+;  SW[3]    ; maquina:inst|inst ; -1.941 ; -1.941 ; Rise       ; maquina:inst|inst ;
+;  SW[4]    ; maquina:inst|inst ; -1.906 ; -1.906 ; Rise       ; maquina:inst|inst ;
+;  SW[5]    ; maquina:inst|inst ; -2.462 ; -2.462 ; Rise       ; maquina:inst|inst ;
+;  SW[6]    ; maquina:inst|inst ; -1.692 ; -1.692 ; Rise       ; maquina:inst|inst ;
+;  SW[7]    ; maquina:inst|inst ; -3.987 ; -3.987 ; Rise       ; maquina:inst|inst ;
+;  SW[8]    ; maquina:inst|inst ; -3.506 ; -3.506 ; Rise       ; maquina:inst|inst ;
+;  SW[9]    ; maquina:inst|inst ; -4.107 ; -4.107 ; Rise       ; maquina:inst|inst ;
+;  SW[10]   ; maquina:inst|inst ; -3.936 ; -3.936 ; Rise       ; maquina:inst|inst ;
+;  SW[11]   ; maquina:inst|inst ; -3.998 ; -3.998 ; Rise       ; maquina:inst|inst ;
+;  SW[12]   ; maquina:inst|inst ; -3.613 ; -3.613 ; Rise       ; maquina:inst|inst ;
+;  SW[13]   ; maquina:inst|inst ; -7.308 ; -7.308 ; Rise       ; maquina:inst|inst ;
+;  SW[14]   ; maquina:inst|inst ; -7.408 ; -7.408 ; Rise       ; maquina:inst|inst ;
+;  SW[15]   ; maquina:inst|inst ; -8.031 ; -8.031 ; Rise       ; maquina:inst|inst ;
+; SW[*]     ; maquina:inst|inst ; -1.312 ; -1.312 ; Fall       ; maquina:inst|inst ;
+;  SW[0]    ; maquina:inst|inst ; -3.087 ; -3.087 ; Fall       ; maquina:inst|inst ;
+;  SW[1]    ; maquina:inst|inst ; -3.570 ; -3.570 ; Fall       ; maquina:inst|inst ;
+;  SW[2]    ; maquina:inst|inst ; -2.809 ; -2.809 ; Fall       ; maquina:inst|inst ;
+;  SW[3]    ; maquina:inst|inst ; -1.337 ; -1.337 ; Fall       ; maquina:inst|inst ;
+;  SW[4]    ; maquina:inst|inst ; -1.312 ; -1.312 ; Fall       ; maquina:inst|inst ;
+;  SW[5]    ; maquina:inst|inst ; -1.858 ; -1.858 ; Fall       ; maquina:inst|inst ;
+;  SW[6]    ; maquina:inst|inst ; -1.577 ; -1.577 ; Fall       ; maquina:inst|inst ;
+;  SW[7]    ; maquina:inst|inst ; -3.278 ; -3.278 ; Fall       ; maquina:inst|inst ;
+;  SW[8]    ; maquina:inst|inst ; -3.141 ; -3.141 ; Fall       ; maquina:inst|inst ;
+;  SW[9]    ; maquina:inst|inst ; -3.458 ; -3.458 ; Fall       ; maquina:inst|inst ;
+;  SW[10]   ; maquina:inst|inst ; -3.356 ; -3.356 ; Fall       ; maquina:inst|inst ;
+;  SW[11]   ; maquina:inst|inst ; -3.275 ; -3.275 ; Fall       ; maquina:inst|inst ;
+;  SW[12]   ; maquina:inst|inst ; -2.907 ; -2.907 ; Fall       ; maquina:inst|inst ;
+;  SW[13]   ; maquina:inst|inst ; -6.589 ; -6.589 ; Fall       ; maquina:inst|inst ;
+;  SW[14]   ; maquina:inst|inst ; -6.855 ; -6.855 ; Fall       ; maquina:inst|inst ;
+;  SW[15]   ; maquina:inst|inst ; -7.376 ; -7.376 ; Fall       ; maquina:inst|inst ;
++-----------+-------------------+--------+--------+------------+-------------------+
+
+
++----------------------------------------------------------------------------------+
+; Clock to Output Times                                                            ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; Data Port ; Clock Port        ; Rise   ; Fall   ; Clock Edge ; Clock Reference   ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; LEDR[*]   ; CLOCK_50          ; 9.071  ; 9.071  ; Rise       ; CLOCK_50          ;
+;  LEDR[1]  ; CLOCK_50          ; 9.071  ; 9.071  ; Rise       ; CLOCK_50          ;
+; HEX0[*]   ; maquina:inst|inst ; 27.644 ; 27.644 ; Rise       ; maquina:inst|inst ;
+;  HEX0[0]  ; maquina:inst|inst ; 27.644 ; 27.644 ; Rise       ; maquina:inst|inst ;
+;  HEX0[1]  ; maquina:inst|inst ; 27.597 ; 27.597 ; Rise       ; maquina:inst|inst ;
+;  HEX0[2]  ; maquina:inst|inst ; 27.575 ; 27.575 ; Rise       ; maquina:inst|inst ;
+;  HEX0[3]  ; maquina:inst|inst ; 27.405 ; 27.405 ; Rise       ; maquina:inst|inst ;
+;  HEX0[4]  ; maquina:inst|inst ; 27.382 ; 27.382 ; Rise       ; maquina:inst|inst ;
+;  HEX0[5]  ; maquina:inst|inst ; 27.360 ; 27.360 ; Rise       ; maquina:inst|inst ;
+;  HEX0[6]  ; maquina:inst|inst ; 27.394 ; 27.394 ; Rise       ; maquina:inst|inst ;
+; HEX1[*]   ; maquina:inst|inst ; 45.367 ; 45.367 ; Rise       ; maquina:inst|inst ;
+;  HEX1[0]  ; maquina:inst|inst ; 45.239 ; 45.239 ; Rise       ; maquina:inst|inst ;
+;  HEX1[1]  ; maquina:inst|inst ; 45.202 ; 45.202 ; Rise       ; maquina:inst|inst ;
+;  HEX1[2]  ; maquina:inst|inst ; 45.317 ; 45.317 ; Rise       ; maquina:inst|inst ;
+;  HEX1[3]  ; maquina:inst|inst ; 45.366 ; 45.366 ; Rise       ; maquina:inst|inst ;
+;  HEX1[4]  ; maquina:inst|inst ; 45.059 ; 45.059 ; Rise       ; maquina:inst|inst ;
+;  HEX1[5]  ; maquina:inst|inst ; 45.342 ; 45.342 ; Rise       ; maquina:inst|inst ;
+;  HEX1[6]  ; maquina:inst|inst ; 45.367 ; 45.367 ; Rise       ; maquina:inst|inst ;
+; HEX2[*]   ; maquina:inst|inst ; 13.715 ; 13.715 ; Rise       ; maquina:inst|inst ;
+;  HEX2[0]  ; maquina:inst|inst ; 13.673 ; 13.673 ; Rise       ; maquina:inst|inst ;
+;  HEX2[1]  ; maquina:inst|inst ; 13.665 ; 13.665 ; Rise       ; maquina:inst|inst ;
+;  HEX2[2]  ; maquina:inst|inst ; 13.705 ; 13.705 ; Rise       ; maquina:inst|inst ;
+;  HEX2[3]  ; maquina:inst|inst ; 13.715 ; 13.715 ; Rise       ; maquina:inst|inst ;
+;  HEX2[4]  ; maquina:inst|inst ; 13.409 ; 13.409 ; Rise       ; maquina:inst|inst ;
+;  HEX2[5]  ; maquina:inst|inst ; 13.409 ; 13.409 ; Rise       ; maquina:inst|inst ;
+;  HEX2[6]  ; maquina:inst|inst ; 13.399 ; 13.399 ; Rise       ; maquina:inst|inst ;
+; HEX4[*]   ; maquina:inst|inst ; 10.064 ; 10.064 ; Rise       ; maquina:inst|inst ;
+;  HEX4[0]  ; maquina:inst|inst ; 9.754  ; 9.754  ; Rise       ; maquina:inst|inst ;
+;  HEX4[1]  ; maquina:inst|inst ; 9.767  ; 9.767  ; Rise       ; maquina:inst|inst ;
+;  HEX4[2]  ; maquina:inst|inst ; 9.770  ; 9.770  ; Rise       ; maquina:inst|inst ;
+;  HEX4[3]  ; maquina:inst|inst ; 10.037 ; 10.037 ; Rise       ; maquina:inst|inst ;
+;  HEX4[4]  ; maquina:inst|inst ; 9.765  ; 9.765  ; Rise       ; maquina:inst|inst ;
+;  HEX4[5]  ; maquina:inst|inst ; 10.061 ; 10.061 ; Rise       ; maquina:inst|inst ;
+;  HEX4[6]  ; maquina:inst|inst ; 10.064 ; 10.064 ; Rise       ; maquina:inst|inst ;
+; HEX6[*]   ; maquina:inst|inst ; 10.158 ; 10.158 ; Rise       ; maquina:inst|inst ;
+;  HEX6[0]  ; maquina:inst|inst ; 9.606  ; 9.606  ; Rise       ; maquina:inst|inst ;
+;  HEX6[1]  ; maquina:inst|inst ; 9.614  ; 9.614  ; Rise       ; maquina:inst|inst ;
+;  HEX6[2]  ; maquina:inst|inst ; 9.595  ; 9.595  ; Rise       ; maquina:inst|inst ;
+;  HEX6[3]  ; maquina:inst|inst ; 10.152 ; 10.152 ; Rise       ; maquina:inst|inst ;
+;  HEX6[4]  ; maquina:inst|inst ; 10.158 ; 10.158 ; Rise       ; maquina:inst|inst ;
+;  HEX6[5]  ; maquina:inst|inst ; 10.110 ; 10.110 ; Rise       ; maquina:inst|inst ;
+;  HEX6[6]  ; maquina:inst|inst ; 10.087 ; 10.087 ; Rise       ; maquina:inst|inst ;
+; LEDR[*]   ; maquina:inst|inst ; 7.040  ; 7.040  ; Rise       ; maquina:inst|inst ;
+;  LEDR[0]  ; maquina:inst|inst ; 5.330  ;        ; Rise       ; maquina:inst|inst ;
+;  LEDR[10] ; maquina:inst|inst ; 6.402  ; 6.402  ; Rise       ; maquina:inst|inst ;
+;  LEDR[11] ; maquina:inst|inst ; 7.040  ; 7.040  ; Rise       ; maquina:inst|inst ;
+;  LEDR[12] ; maquina:inst|inst ; 6.727  ; 6.727  ; Rise       ; maquina:inst|inst ;
+;  LEDR[13] ; maquina:inst|inst ; 6.153  ; 6.153  ; Rise       ; maquina:inst|inst ;
+;  LEDR[14] ; maquina:inst|inst ; 6.369  ; 6.369  ; Rise       ; maquina:inst|inst ;
+;  LEDR[15] ; maquina:inst|inst ; 6.378  ; 6.378  ; Rise       ; maquina:inst|inst ;
+;  LEDR[16] ; maquina:inst|inst ; 6.534  ; 6.534  ; Rise       ; maquina:inst|inst ;
+;  LEDR[17] ; maquina:inst|inst ; 6.412  ; 6.412  ; Rise       ; maquina:inst|inst ;
+; HEX0[*]   ; maquina:inst|inst ; 24.759 ; 24.759 ; Fall       ; maquina:inst|inst ;
+;  HEX0[0]  ; maquina:inst|inst ; 24.759 ; 24.759 ; Fall       ; maquina:inst|inst ;
+;  HEX0[1]  ; maquina:inst|inst ; 24.712 ; 24.712 ; Fall       ; maquina:inst|inst ;
+;  HEX0[2]  ; maquina:inst|inst ; 24.690 ; 24.690 ; Fall       ; maquina:inst|inst ;
+;  HEX0[3]  ; maquina:inst|inst ; 24.520 ; 24.520 ; Fall       ; maquina:inst|inst ;
+;  HEX0[4]  ; maquina:inst|inst ; 24.497 ; 24.497 ; Fall       ; maquina:inst|inst ;
+;  HEX0[5]  ; maquina:inst|inst ; 24.475 ; 24.475 ; Fall       ; maquina:inst|inst ;
+;  HEX0[6]  ; maquina:inst|inst ; 24.509 ; 24.509 ; Fall       ; maquina:inst|inst ;
+; HEX1[*]   ; maquina:inst|inst ; 42.482 ; 42.482 ; Fall       ; maquina:inst|inst ;
+;  HEX1[0]  ; maquina:inst|inst ; 42.354 ; 42.354 ; Fall       ; maquina:inst|inst ;
+;  HEX1[1]  ; maquina:inst|inst ; 42.317 ; 42.317 ; Fall       ; maquina:inst|inst ;
+;  HEX1[2]  ; maquina:inst|inst ; 42.432 ; 42.432 ; Fall       ; maquina:inst|inst ;
+;  HEX1[3]  ; maquina:inst|inst ; 42.481 ; 42.481 ; Fall       ; maquina:inst|inst ;
+;  HEX1[4]  ; maquina:inst|inst ; 42.174 ; 42.174 ; Fall       ; maquina:inst|inst ;
+;  HEX1[5]  ; maquina:inst|inst ; 42.457 ; 42.457 ; Fall       ; maquina:inst|inst ;
+;  HEX1[6]  ; maquina:inst|inst ; 42.482 ; 42.482 ; Fall       ; maquina:inst|inst ;
+; HEX2[*]   ; maquina:inst|inst ; 10.727 ; 10.727 ; Fall       ; maquina:inst|inst ;
+;  HEX2[0]  ; maquina:inst|inst ; 10.685 ; 10.685 ; Fall       ; maquina:inst|inst ;
+;  HEX2[1]  ; maquina:inst|inst ; 10.677 ; 10.677 ; Fall       ; maquina:inst|inst ;
+;  HEX2[2]  ; maquina:inst|inst ; 10.717 ; 10.717 ; Fall       ; maquina:inst|inst ;
+;  HEX2[3]  ; maquina:inst|inst ; 10.727 ; 10.727 ; Fall       ; maquina:inst|inst ;
+;  HEX2[4]  ; maquina:inst|inst ; 10.421 ; 10.421 ; Fall       ; maquina:inst|inst ;
+;  HEX2[5]  ; maquina:inst|inst ; 10.421 ; 10.421 ; Fall       ; maquina:inst|inst ;
+;  HEX2[6]  ; maquina:inst|inst ; 10.411 ; 10.411 ; Fall       ; maquina:inst|inst ;
+; LEDG[*]   ; maquina:inst|inst ; 8.573  ; 8.573  ; Fall       ; maquina:inst|inst ;
+;  LEDG[0]  ; maquina:inst|inst ; 8.573  ; 8.573  ; Fall       ; maquina:inst|inst ;
+;  LEDG[1]  ; maquina:inst|inst ; 7.723  ; 7.723  ; Fall       ; maquina:inst|inst ;
+; LEDR[*]   ; maquina:inst|inst ;        ; 5.330  ; Fall       ; maquina:inst|inst ;
+;  LEDR[0]  ; maquina:inst|inst ;        ; 5.330  ; Fall       ; maquina:inst|inst ;
++-----------+-------------------+--------+--------+------------+-------------------+
+
+
++----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                    ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; Data Port ; Clock Port        ; Rise   ; Fall   ; Clock Edge ; Clock Reference   ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; LEDR[*]   ; CLOCK_50          ; 9.071  ; 9.071  ; Rise       ; CLOCK_50          ;
+;  LEDR[1]  ; CLOCK_50          ; 9.071  ; 9.071  ; Rise       ; CLOCK_50          ;
+; HEX0[*]   ; maquina:inst|inst ; 10.380 ; 10.380 ; Rise       ; maquina:inst|inst ;
+;  HEX0[0]  ; maquina:inst|inst ; 10.642 ; 10.642 ; Rise       ; maquina:inst|inst ;
+;  HEX0[1]  ; maquina:inst|inst ; 10.594 ; 10.594 ; Rise       ; maquina:inst|inst ;
+;  HEX0[2]  ; maquina:inst|inst ; 10.571 ; 10.571 ; Rise       ; maquina:inst|inst ;
+;  HEX0[3]  ; maquina:inst|inst ; 10.408 ; 10.408 ; Rise       ; maquina:inst|inst ;
+;  HEX0[4]  ; maquina:inst|inst ; 10.380 ; 10.380 ; Rise       ; maquina:inst|inst ;
+;  HEX0[5]  ; maquina:inst|inst ; 10.389 ; 10.389 ; Rise       ; maquina:inst|inst ;
+;  HEX0[6]  ; maquina:inst|inst ; 10.391 ; 10.391 ; Rise       ; maquina:inst|inst ;
+; HEX1[*]   ; maquina:inst|inst ; 13.523 ; 13.523 ; Rise       ; maquina:inst|inst ;
+;  HEX1[0]  ; maquina:inst|inst ; 13.703 ; 13.703 ; Rise       ; maquina:inst|inst ;
+;  HEX1[1]  ; maquina:inst|inst ; 13.666 ; 13.666 ; Rise       ; maquina:inst|inst ;
+;  HEX1[2]  ; maquina:inst|inst ; 13.781 ; 13.781 ; Rise       ; maquina:inst|inst ;
+;  HEX1[3]  ; maquina:inst|inst ; 13.830 ; 13.830 ; Rise       ; maquina:inst|inst ;
+;  HEX1[4]  ; maquina:inst|inst ; 13.523 ; 13.523 ; Rise       ; maquina:inst|inst ;
+;  HEX1[5]  ; maquina:inst|inst ; 13.806 ; 13.806 ; Rise       ; maquina:inst|inst ;
+;  HEX1[6]  ; maquina:inst|inst ; 13.831 ; 13.831 ; Rise       ; maquina:inst|inst ;
+; HEX2[*]   ; maquina:inst|inst ; 10.027 ; 10.027 ; Rise       ; maquina:inst|inst ;
+;  HEX2[0]  ; maquina:inst|inst ; 10.301 ; 10.301 ; Rise       ; maquina:inst|inst ;
+;  HEX2[1]  ; maquina:inst|inst ; 10.293 ; 10.293 ; Rise       ; maquina:inst|inst ;
+;  HEX2[2]  ; maquina:inst|inst ; 10.333 ; 10.333 ; Rise       ; maquina:inst|inst ;
+;  HEX2[3]  ; maquina:inst|inst ; 10.343 ; 10.343 ; Rise       ; maquina:inst|inst ;
+;  HEX2[4]  ; maquina:inst|inst ; 10.037 ; 10.037 ; Rise       ; maquina:inst|inst ;
+;  HEX2[5]  ; maquina:inst|inst ; 10.037 ; 10.037 ; Rise       ; maquina:inst|inst ;
+;  HEX2[6]  ; maquina:inst|inst ; 10.027 ; 10.027 ; Rise       ; maquina:inst|inst ;
+; HEX4[*]   ; maquina:inst|inst ; 9.373  ; 9.373  ; Rise       ; maquina:inst|inst ;
+;  HEX4[0]  ; maquina:inst|inst ; 9.386  ; 9.386  ; Rise       ; maquina:inst|inst ;
+;  HEX4[1]  ; maquina:inst|inst ; 9.398  ; 9.398  ; Rise       ; maquina:inst|inst ;
+;  HEX4[2]  ; maquina:inst|inst ; 9.373  ; 9.373  ; Rise       ; maquina:inst|inst ;
+;  HEX4[3]  ; maquina:inst|inst ; 9.667  ; 9.667  ; Rise       ; maquina:inst|inst ;
+;  HEX4[4]  ; maquina:inst|inst ; 9.393  ; 9.393  ; Rise       ; maquina:inst|inst ;
+;  HEX4[5]  ; maquina:inst|inst ; 9.694  ; 9.694  ; Rise       ; maquina:inst|inst ;
+;  HEX4[6]  ; maquina:inst|inst ; 9.694  ; 9.694  ; Rise       ; maquina:inst|inst ;
+; HEX6[*]   ; maquina:inst|inst ; 8.944  ; 8.944  ; Rise       ; maquina:inst|inst ;
+;  HEX6[0]  ; maquina:inst|inst ; 8.944  ; 8.944  ; Rise       ; maquina:inst|inst ;
+;  HEX6[1]  ; maquina:inst|inst ; 8.958  ; 8.958  ; Rise       ; maquina:inst|inst ;
+;  HEX6[2]  ; maquina:inst|inst ; 8.964  ; 8.964  ; Rise       ; maquina:inst|inst ;
+;  HEX6[3]  ; maquina:inst|inst ; 9.511  ; 9.511  ; Rise       ; maquina:inst|inst ;
+;  HEX6[4]  ; maquina:inst|inst ; 9.503  ; 9.503  ; Rise       ; maquina:inst|inst ;
+;  HEX6[5]  ; maquina:inst|inst ; 9.468  ; 9.468  ; Rise       ; maquina:inst|inst ;
+;  HEX6[6]  ; maquina:inst|inst ; 9.441  ; 9.441  ; Rise       ; maquina:inst|inst ;
+; LEDR[*]   ; maquina:inst|inst ; 5.330  ; 6.153  ; Rise       ; maquina:inst|inst ;
+;  LEDR[0]  ; maquina:inst|inst ; 5.330  ;        ; Rise       ; maquina:inst|inst ;
+;  LEDR[10] ; maquina:inst|inst ; 6.402  ; 6.402  ; Rise       ; maquina:inst|inst ;
+;  LEDR[11] ; maquina:inst|inst ; 7.040  ; 7.040  ; Rise       ; maquina:inst|inst ;
+;  LEDR[12] ; maquina:inst|inst ; 6.727  ; 6.727  ; Rise       ; maquina:inst|inst ;
+;  LEDR[13] ; maquina:inst|inst ; 6.153  ; 6.153  ; Rise       ; maquina:inst|inst ;
+;  LEDR[14] ; maquina:inst|inst ; 6.369  ; 6.369  ; Rise       ; maquina:inst|inst ;
+;  LEDR[15] ; maquina:inst|inst ; 6.378  ; 6.378  ; Rise       ; maquina:inst|inst ;
+;  LEDR[16] ; maquina:inst|inst ; 6.534  ; 6.534  ; Rise       ; maquina:inst|inst ;
+;  LEDR[17] ; maquina:inst|inst ; 6.412  ; 6.412  ; Rise       ; maquina:inst|inst ;
+; HEX0[*]   ; maquina:inst|inst ; 8.261  ; 8.261  ; Fall       ; maquina:inst|inst ;
+;  HEX0[0]  ; maquina:inst|inst ; 8.523  ; 8.523  ; Fall       ; maquina:inst|inst ;
+;  HEX0[1]  ; maquina:inst|inst ; 8.475  ; 8.475  ; Fall       ; maquina:inst|inst ;
+;  HEX0[2]  ; maquina:inst|inst ; 8.452  ; 8.452  ; Fall       ; maquina:inst|inst ;
+;  HEX0[3]  ; maquina:inst|inst ; 8.289  ; 8.289  ; Fall       ; maquina:inst|inst ;
+;  HEX0[4]  ; maquina:inst|inst ; 8.261  ; 8.261  ; Fall       ; maquina:inst|inst ;
+;  HEX0[5]  ; maquina:inst|inst ; 8.270  ; 8.270  ; Fall       ; maquina:inst|inst ;
+;  HEX0[6]  ; maquina:inst|inst ; 8.272  ; 8.272  ; Fall       ; maquina:inst|inst ;
+; HEX1[*]   ; maquina:inst|inst ; 11.713 ; 11.713 ; Fall       ; maquina:inst|inst ;
+;  HEX1[0]  ; maquina:inst|inst ; 11.908 ; 11.908 ; Fall       ; maquina:inst|inst ;
+;  HEX1[1]  ; maquina:inst|inst ; 11.870 ; 11.870 ; Fall       ; maquina:inst|inst ;
+;  HEX1[2]  ; maquina:inst|inst ; 11.979 ; 11.979 ; Fall       ; maquina:inst|inst ;
+;  HEX1[3]  ; maquina:inst|inst ; 12.035 ; 12.035 ; Fall       ; maquina:inst|inst ;
+;  HEX1[4]  ; maquina:inst|inst ; 11.713 ; 11.713 ; Fall       ; maquina:inst|inst ;
+;  HEX1[5]  ; maquina:inst|inst ; 11.997 ; 11.997 ; Fall       ; maquina:inst|inst ;
+;  HEX1[6]  ; maquina:inst|inst ; 12.026 ; 12.026 ; Fall       ; maquina:inst|inst ;
+; HEX2[*]   ; maquina:inst|inst ; 8.339  ; 8.339  ; Fall       ; maquina:inst|inst ;
+;  HEX2[0]  ; maquina:inst|inst ; 8.613  ; 8.613  ; Fall       ; maquina:inst|inst ;
+;  HEX2[1]  ; maquina:inst|inst ; 8.605  ; 8.605  ; Fall       ; maquina:inst|inst ;
+;  HEX2[2]  ; maquina:inst|inst ; 8.645  ; 8.645  ; Fall       ; maquina:inst|inst ;
+;  HEX2[3]  ; maquina:inst|inst ; 8.655  ; 8.655  ; Fall       ; maquina:inst|inst ;
+;  HEX2[4]  ; maquina:inst|inst ; 8.349  ; 8.349  ; Fall       ; maquina:inst|inst ;
+;  HEX2[5]  ; maquina:inst|inst ; 8.349  ; 8.349  ; Fall       ; maquina:inst|inst ;
+;  HEX2[6]  ; maquina:inst|inst ; 8.339  ; 8.339  ; Fall       ; maquina:inst|inst ;
+; LEDG[*]   ; maquina:inst|inst ; 7.561  ; 7.561  ; Fall       ; maquina:inst|inst ;
+;  LEDG[0]  ; maquina:inst|inst ; 8.292  ; 8.292  ; Fall       ; maquina:inst|inst ;
+;  LEDG[1]  ; maquina:inst|inst ; 7.561  ; 7.561  ; Fall       ; maquina:inst|inst ;
+; LEDR[*]   ; maquina:inst|inst ;        ; 5.330  ; Fall       ; maquina:inst|inst ;
+;  LEDR[0]  ; maquina:inst|inst ;        ; 5.330  ; Fall       ; maquina:inst|inst ;
++-----------+-------------------+--------+--------+------------+-------------------+
+
+
++--------------------------------------------------------------+
+; Propagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; KEY[0]     ; HEX0[0]     ; 27.615 ; 27.615 ; 27.615 ; 27.615 ;
+; KEY[0]     ; HEX0[1]     ; 27.568 ; 27.568 ; 27.568 ; 27.568 ;
+; KEY[0]     ; HEX0[2]     ; 27.546 ; 27.546 ; 27.546 ; 27.546 ;
+; KEY[0]     ; HEX0[3]     ; 27.376 ; 27.376 ; 27.376 ; 27.376 ;
+; KEY[0]     ; HEX0[4]     ; 27.353 ; 27.353 ; 27.353 ; 27.353 ;
+; KEY[0]     ; HEX0[5]     ; 27.331 ; 27.331 ; 27.331 ; 27.331 ;
+; KEY[0]     ; HEX0[6]     ; 27.365 ; 27.365 ; 27.365 ; 27.365 ;
+; KEY[0]     ; HEX1[0]     ; 45.210 ; 45.210 ; 45.210 ; 45.210 ;
+; KEY[0]     ; HEX1[1]     ; 45.173 ; 45.173 ; 45.173 ; 45.173 ;
+; KEY[0]     ; HEX1[2]     ; 45.288 ; 45.288 ; 45.288 ; 45.288 ;
+; KEY[0]     ; HEX1[3]     ; 45.337 ; 45.337 ; 45.337 ; 45.337 ;
+; KEY[0]     ; HEX1[4]     ; 45.030 ; 45.030 ; 45.030 ; 45.030 ;
+; KEY[0]     ; HEX1[5]     ; 45.313 ; 45.313 ; 45.313 ; 45.313 ;
+; KEY[0]     ; HEX1[6]     ; 45.338 ; 45.338 ; 45.338 ; 45.338 ;
+; KEY[0]     ; HEX2[0]     ; 14.399 ;        ;        ; 14.399 ;
+; KEY[0]     ; HEX2[1]     ; 14.391 ;        ;        ; 14.391 ;
+; KEY[0]     ; HEX2[2]     ; 14.431 ;        ;        ; 14.431 ;
+; KEY[0]     ; HEX2[3]     ; 14.441 ;        ;        ; 14.441 ;
+; KEY[0]     ; HEX2[4]     ; 14.135 ;        ;        ; 14.135 ;
+; KEY[0]     ; HEX2[5]     ; 14.135 ;        ;        ; 14.135 ;
+; KEY[0]     ; HEX2[6]     ;        ; 14.125 ; 14.125 ;        ;
+; KEY[0]     ; LEDG[2]     ; 9.724  ;        ;        ; 9.724  ;
+; SW[0]      ; LEDG[8]     ; 9.719  ; 11.699 ; 11.699 ; 9.719  ;
+; SW[0]      ; LEDR[6]     ;        ; 12.057 ; 12.057 ;        ;
+; SW[0]      ; LEDR[7]     ;        ; 12.219 ; 12.219 ;        ;
+; SW[0]      ; LEDR[8]     ;        ; 10.966 ; 10.966 ;        ;
+; SW[0]      ; LEDR[9]     ;        ; 10.939 ; 10.939 ;        ;
+; SW[1]      ; LEDG[8]     ; 9.476  ; 12.029 ; 12.029 ; 9.476  ;
+; SW[1]      ; LEDR[6]     ; 9.971  ; 11.627 ; 11.627 ; 9.971  ;
+; SW[1]      ; LEDR[7]     ;        ; 12.705 ; 12.705 ;        ;
+; SW[1]      ; LEDR[8]     ;        ; 10.536 ; 10.536 ;        ;
+; SW[1]      ; LEDR[9]     ;        ; 10.509 ; 10.509 ;        ;
+; SW[2]      ; LEDG[8]     ; 9.580  ; 11.266 ; 11.266 ; 9.580  ;
+; SW[2]      ; LEDR[6]     ;        ; 11.332 ; 11.332 ;        ;
+; SW[2]      ; LEDR[7]     ; 10.256 ; 11.942 ; 11.942 ; 10.256 ;
+; SW[2]      ; LEDR[8]     ;        ; 10.241 ; 10.241 ;        ;
+; SW[2]      ; LEDR[9]     ;        ; 10.214 ; 10.214 ;        ;
+; SW[3]      ; LEDG[8]     ; 7.711  ; 11.879 ; 11.879 ; 7.711  ;
+; SW[3]      ; LEDR[6]     ; 8.206  ; 12.237 ; 12.237 ; 8.206  ;
+; SW[3]      ; LEDR[7]     ; 7.885  ; 12.199 ; 12.199 ; 7.885  ;
+; SW[3]      ; LEDR[8]     ;        ; 11.146 ; 11.146 ;        ;
+; SW[3]      ; LEDR[9]     ;        ; 11.119 ; 11.119 ;        ;
+; SW[4]      ; LEDG[8]     ; 7.313  ; 10.946 ; 10.946 ; 7.313  ;
+; SW[4]      ; LEDR[6]     ;        ; 11.304 ; 11.304 ;        ;
+; SW[4]      ; LEDR[7]     ;        ; 11.266 ; 11.266 ;        ;
+; SW[4]      ; LEDR[8]     ; 6.580  ; 10.213 ; 10.213 ; 6.580  ;
+; SW[4]      ; LEDR[9]     ;        ; 10.186 ; 10.186 ;        ;
+; SW[5]      ; LEDG[8]     ; 8.449  ; 11.965 ; 11.965 ; 8.449  ;
+; SW[5]      ; LEDR[6]     ; 8.944  ; 12.323 ; 12.323 ; 8.944  ;
+; SW[5]      ; LEDR[7]     ;        ; 12.285 ; 12.285 ;        ;
+; SW[5]      ; LEDR[8]     ; 8.013  ; 11.232 ; 11.232 ; 8.013  ;
+; SW[5]      ; LEDR[9]     ;        ; 11.205 ; 11.205 ;        ;
+; SW[6]      ; LEDG[8]     ; 9.583  ; 11.726 ; 11.726 ; 9.583  ;
+; SW[6]      ; LEDR[6]     ;        ; 12.084 ; 12.084 ;        ;
+; SW[6]      ; LEDR[7]     ; 10.259 ; 12.046 ; 12.046 ; 10.259 ;
+; SW[6]      ; LEDR[8]     ; 8.002  ; 10.993 ; 10.993 ; 8.002  ;
+; SW[6]      ; LEDR[9]     ;        ; 10.966 ; 10.966 ;        ;
+; SW[7]      ; LEDG[8]     ; 10.326 ; 11.587 ; 11.587 ; 10.326 ;
+; SW[7]      ; LEDR[6]     ; 10.821 ; 11.945 ; 11.945 ; 10.821 ;
+; SW[7]      ; LEDR[7]     ; 10.500 ; 11.907 ; 11.907 ; 10.500 ;
+; SW[7]      ; LEDR[8]     ; 8.546  ; 10.854 ; 10.854 ; 8.546  ;
+; SW[7]      ; LEDR[9]     ;        ; 10.827 ; 10.827 ;        ;
+; SW[8]      ; LEDG[8]     ; 8.878  ; 12.011 ; 12.011 ; 8.878  ;
+; SW[8]      ; LEDR[6]     ;        ; 11.569 ; 11.569 ;        ;
+; SW[8]      ; LEDR[7]     ;        ; 12.687 ; 12.687 ;        ;
+; SW[8]      ; LEDR[8]     ;        ; 10.430 ; 10.430 ;        ;
+; SW[8]      ; LEDR[9]     ; 8.156  ; 10.231 ; 10.231 ; 8.156  ;
+; SW[9]      ; LEDG[8]     ; 10.103 ; 12.909 ; 12.909 ; 10.103 ;
+; SW[9]      ; LEDR[6]     ; 10.598 ; 12.467 ; 12.467 ; 10.598 ;
+; SW[9]      ; LEDR[7]     ;        ; 13.585 ; 13.585 ;        ;
+; SW[9]      ; LEDR[8]     ;        ; 11.328 ; 11.328 ;        ;
+; SW[9]      ; LEDR[9]     ; 9.480  ; 9.892  ; 9.892  ; 9.480  ;
+; SW[10]     ; LEDG[8]     ; 10.089 ; 12.444 ; 12.444 ; 10.089 ;
+; SW[10]     ; LEDR[6]     ;        ; 12.002 ; 12.002 ;        ;
+; SW[10]     ; LEDR[7]     ; 10.765 ; 13.120 ; 13.120 ; 10.765 ;
+; SW[10]     ; LEDR[8]     ;        ; 10.863 ; 10.863 ;        ;
+; SW[10]     ; LEDR[9]     ; 9.105  ; 9.791  ; 9.791  ; 9.105  ;
+; SW[11]     ; LEDG[8]     ; 10.080 ; 13.716 ; 13.716 ; 10.080 ;
+; SW[11]     ; LEDR[6]     ; 10.575 ; 13.274 ; 13.274 ; 10.575 ;
+; SW[11]     ; LEDR[7]     ; 10.219 ; 14.392 ; 14.392 ; 10.219 ;
+; SW[11]     ; LEDR[8]     ;        ; 12.135 ; 12.135 ;        ;
+; SW[11]     ; LEDR[9]     ; 9.457  ; 10.395 ; 10.395 ; 9.457  ;
+; SW[12]     ; LEDG[8]     ; 9.825  ; 13.055 ; 13.055 ; 9.825  ;
+; SW[12]     ; LEDR[6]     ;        ; 12.613 ; 12.613 ;        ;
+; SW[12]     ; LEDR[7]     ;        ; 13.731 ; 13.731 ;        ;
+; SW[12]     ; LEDR[8]     ; 9.092  ; 11.474 ; 11.474 ; 9.092  ;
+; SW[12]     ; LEDR[9]     ; 8.263  ; 9.758  ; 9.758  ; 8.263  ;
+; SW[13]     ; LEDG[8]     ; 13.564 ; 17.026 ; 17.026 ; 13.564 ;
+; SW[13]     ; LEDR[6]     ; 14.059 ; 16.584 ; 16.584 ; 14.059 ;
+; SW[13]     ; LEDR[7]     ;        ; 17.702 ; 17.702 ;        ;
+; SW[13]     ; LEDR[8]     ; 12.920 ; 15.445 ; 15.445 ; 12.920 ;
+; SW[13]     ; LEDR[9]     ; 12.941 ; 13.705 ; 13.705 ; 12.941 ;
+; SW[14]     ; LEDG[8]     ; 13.461 ; 17.316 ; 17.316 ; 13.461 ;
+; SW[14]     ; LEDR[6]     ;        ; 16.874 ; 16.874 ;        ;
+; SW[14]     ; LEDR[7]     ; 14.137 ; 17.992 ; 17.992 ; 14.137 ;
+; SW[14]     ; LEDR[8]     ; 12.190 ; 15.735 ; 15.735 ; 12.190 ;
+; SW[14]     ; LEDR[9]     ; 12.477 ; 13.995 ; 13.995 ; 12.477 ;
+; SW[15]     ; LEDG[8]     ; 13.961 ; 16.614 ; 16.614 ; 13.961 ;
+; SW[15]     ; LEDR[6]     ; 14.456 ; 16.172 ; 16.172 ; 14.456 ;
+; SW[15]     ; LEDR[7]     ; 14.090 ; 17.290 ; 17.290 ; 14.090 ;
+; SW[15]     ; LEDR[8]     ; 13.391 ; 15.033 ; 15.033 ; 13.391 ;
+; SW[15]     ; LEDR[9]     ; 13.338 ; 13.541 ; 13.541 ; 13.338 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------------------------------------+
+; Minimum Propagation Delay                                    ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; KEY[0]     ; HEX0[0]     ; 14.303 ; 14.303 ; 14.303 ; 14.303 ;
+; KEY[0]     ; HEX0[1]     ; 14.255 ; 14.255 ; 14.255 ; 14.255 ;
+; KEY[0]     ; HEX0[2]     ; 15.086 ; 14.232 ; 14.232 ; 15.086 ;
+; KEY[0]     ; HEX0[3]     ; 14.069 ; 14.069 ; 14.069 ; 14.069 ;
+; KEY[0]     ; HEX0[4]     ; 14.041 ; 14.895 ; 14.895 ; 14.041 ;
+; KEY[0]     ; HEX0[5]     ; 14.050 ; 14.904 ; 14.904 ; 14.050 ;
+; KEY[0]     ; HEX0[6]     ; 14.052 ; 14.052 ; 14.052 ; 14.052 ;
+; KEY[0]     ; HEX1[0]     ; 17.688 ; 17.688 ; 17.688 ; 17.688 ;
+; KEY[0]     ; HEX1[1]     ; 17.650 ; 17.650 ; 17.650 ; 17.650 ;
+; KEY[0]     ; HEX1[2]     ; 17.759 ; 17.759 ; 17.759 ; 17.759 ;
+; KEY[0]     ; HEX1[3]     ; 17.815 ; 17.815 ; 17.815 ; 17.815 ;
+; KEY[0]     ; HEX1[4]     ; 17.493 ; 17.493 ; 17.493 ; 17.493 ;
+; KEY[0]     ; HEX1[5]     ; 17.777 ; 17.777 ; 17.777 ; 17.777 ;
+; KEY[0]     ; HEX1[6]     ; 17.806 ; 17.806 ; 17.806 ; 17.806 ;
+; KEY[0]     ; HEX2[0]     ; 14.399 ;        ;        ; 14.399 ;
+; KEY[0]     ; HEX2[1]     ; 14.391 ;        ;        ; 14.391 ;
+; KEY[0]     ; HEX2[2]     ; 14.431 ;        ;        ; 14.431 ;
+; KEY[0]     ; HEX2[3]     ; 14.441 ;        ;        ; 14.441 ;
+; KEY[0]     ; HEX2[4]     ; 14.135 ;        ;        ; 14.135 ;
+; KEY[0]     ; HEX2[5]     ; 14.135 ;        ;        ; 14.135 ;
+; KEY[0]     ; HEX2[6]     ;        ; 14.125 ; 14.125 ;        ;
+; KEY[0]     ; LEDG[2]     ; 9.724  ;        ;        ; 9.724  ;
+; SW[0]      ; LEDG[8]     ; 9.719  ; 9.869  ; 9.869  ; 9.719  ;
+; SW[0]      ; LEDR[6]     ;        ; 10.364 ; 10.364 ;        ;
+; SW[0]      ; LEDR[7]     ;        ; 10.309 ; 10.309 ;        ;
+; SW[0]      ; LEDR[8]     ;        ; 8.355  ; 8.355  ;        ;
+; SW[0]      ; LEDR[9]     ;        ; 9.274  ; 9.274  ;        ;
+; SW[1]      ; LEDG[8]     ; 9.476  ; 9.567  ; 9.567  ; 9.476  ;
+; SW[1]      ; LEDR[6]     ; 9.971  ; 10.780 ; 10.780 ; 9.971  ;
+; SW[1]      ; LEDR[7]     ;        ; 10.383 ; 10.383 ;        ;
+; SW[1]      ; LEDR[8]     ;        ; 8.838  ; 8.838  ;        ;
+; SW[1]      ; LEDR[9]     ;        ; 8.845  ; 8.845  ;        ;
+; SW[2]      ; LEDG[8]     ; 9.580  ; 9.140  ; 9.140  ; 9.580  ;
+; SW[2]      ; LEDR[6]     ;        ; 9.635  ; 9.635  ;        ;
+; SW[2]      ; LEDR[7]     ; 10.256 ; 10.031 ; 10.031 ; 10.256 ;
+; SW[2]      ; LEDR[8]     ;        ; 8.077  ; 8.077  ;        ;
+; SW[2]      ; LEDR[9]     ;        ; 8.550  ; 8.550  ;        ;
+; SW[3]      ; LEDG[8]     ; 7.711  ; 8.157  ; 8.157  ; 7.711  ;
+; SW[3]      ; LEDR[6]     ; 8.206  ; 8.815  ; 8.815  ; 8.206  ;
+; SW[3]      ; LEDR[7]     ; 7.885  ; 10.402 ; 10.402 ; 7.885  ;
+; SW[3]      ; LEDR[8]     ;        ; 7.424  ; 7.424  ;        ;
+; SW[3]      ; LEDR[9]     ;        ; 9.454  ; 9.454  ;        ;
+; SW[4]      ; LEDG[8]     ; 7.313  ; 7.676  ; 7.676  ; 7.313  ;
+; SW[4]      ; LEDR[6]     ;        ; 8.171  ; 8.171  ;        ;
+; SW[4]      ; LEDR[7]     ;        ; 8.344  ; 8.344  ;        ;
+; SW[4]      ; LEDR[8]     ; 6.580  ; 7.240  ; 7.240  ; 6.580  ;
+; SW[4]      ; LEDR[9]     ;        ; 8.521  ; 8.521  ;        ;
+; SW[5]      ; LEDG[8]     ; 8.449  ; 8.232  ; 8.232  ; 8.449  ;
+; SW[5]      ; LEDR[6]     ; 8.944  ; 8.727  ; 8.727  ; 8.944  ;
+; SW[5]      ; LEDR[7]     ;        ; 8.406  ; 8.406  ;        ;
+; SW[5]      ; LEDR[8]     ; 8.013  ; 7.510  ; 7.510  ; 8.013  ;
+; SW[5]      ; LEDR[9]     ;        ; 9.540  ; 9.540  ;        ;
+; SW[6]      ; LEDG[8]     ; 9.583  ; 7.462  ; 7.462  ; 9.583  ;
+; SW[6]      ; LEDR[6]     ;        ; 7.957  ; 7.957  ;        ;
+; SW[6]      ; LEDR[7]     ; 10.259 ; 8.125  ; 8.125  ; 10.259 ;
+; SW[6]      ; LEDR[8]     ; 8.002  ; 7.026  ; 7.026  ; 8.002  ;
+; SW[6]      ; LEDR[9]     ;        ; 9.301  ; 9.301  ;        ;
+; SW[7]      ; LEDG[8]     ; 10.326 ; 9.599  ; 9.599  ; 10.326 ;
+; SW[7]      ; LEDR[6]     ; 10.821 ; 10.252 ; 10.252 ; 10.821 ;
+; SW[7]      ; LEDR[7]     ; 10.500 ; 10.429 ; 10.429 ; 10.500 ;
+; SW[7]      ; LEDR[8]     ; 8.546  ; 8.897  ; 8.897  ; 8.546  ;
+; SW[7]      ; LEDR[9]     ;        ; 9.162  ; 9.162  ;        ;
+; SW[8]      ; LEDG[8]     ; 8.878  ; 9.689  ; 9.689  ; 8.878  ;
+; SW[8]      ; LEDR[6]     ;        ; 10.191 ; 10.191 ;        ;
+; SW[8]      ; LEDR[7]     ;        ; 10.347 ; 10.347 ;        ;
+; SW[8]      ; LEDR[8]     ;        ; 8.820  ; 8.820  ;        ;
+; SW[8]      ; LEDR[9]     ; 8.156  ; 9.384  ; 9.384  ; 8.156  ;
+; SW[9]      ; LEDG[8]     ; 10.103 ; 9.753  ; 9.753  ; 10.103 ;
+; SW[9]      ; LEDR[6]     ; 10.598 ; 10.372 ; 10.372 ; 10.598 ;
+; SW[9]      ; LEDR[7]     ;        ; 10.006 ; 10.006 ;        ;
+; SW[9]      ; LEDR[8]     ;        ; 8.995  ; 8.995  ;        ;
+; SW[9]      ; LEDR[9]     ; 9.480  ; 9.031  ; 9.031  ; 9.480  ;
+; SW[10]     ; LEDG[8]     ; 10.089 ; 9.308  ; 9.308  ; 10.089 ;
+; SW[10]     ; LEDR[6]     ;        ; 10.270 ; 10.270 ;        ;
+; SW[10]     ; LEDR[7]     ; 10.765 ; 9.904  ; 9.904  ; 10.765 ;
+; SW[10]     ; LEDR[8]     ;        ; 8.894  ; 8.894  ;        ;
+; SW[10]     ; LEDR[9]     ; 9.105  ; 8.586  ; 8.586  ; 9.105  ;
+; SW[11]     ; LEDG[8]     ; 10.080 ; 9.814  ; 9.814  ; 10.080 ;
+; SW[11]     ; LEDR[6]     ; 10.575 ; 10.749 ; 10.749 ; 10.575 ;
+; SW[11]     ; LEDR[7]     ; 10.219 ; 10.490 ; 10.490 ; 10.219 ;
+; SW[11]     ; LEDR[8]     ;        ; 8.543  ; 8.543  ;        ;
+; SW[11]     ; LEDR[9]     ; 9.457  ; 8.648  ; 8.648  ; 9.457  ;
+; SW[12]     ; LEDG[8]     ; 9.825  ; 9.439  ; 9.439  ; 9.825  ;
+; SW[12]     ; LEDR[6]     ;        ; 10.105 ; 10.105 ;        ;
+; SW[12]     ; LEDR[7]     ;        ; 9.826  ; 9.826  ;        ;
+; SW[12]     ; LEDR[8]     ; 9.092  ; 8.175  ; 8.175  ; 9.092  ;
+; SW[12]     ; LEDR[9]     ; 8.263  ; 8.455  ; 8.455  ; 8.263  ;
+; SW[13]     ; LEDG[8]     ; 13.564 ; 13.128 ; 13.128 ; 13.564 ;
+; SW[13]     ; LEDR[6]     ; 14.059 ; 13.888 ; 13.888 ; 14.059 ;
+; SW[13]     ; LEDR[7]     ;        ; 13.532 ; 13.532 ;        ;
+; SW[13]     ; LEDR[8]     ; 12.920 ; 11.857 ; 11.857 ; 12.920 ;
+; SW[13]     ; LEDR[9]     ; 12.941 ; 11.958 ; 11.958 ; 12.941 ;
+; SW[14]     ; LEDG[8]     ; 13.461 ; 13.178 ; 13.178 ; 13.461 ;
+; SW[14]     ; LEDR[6]     ;        ; 13.673 ; 13.673 ;        ;
+; SW[14]     ; LEDR[7]     ; 14.137 ; 13.403 ; 13.403 ; 14.137 ;
+; SW[14]     ; LEDR[8]     ; 12.190 ; 12.534 ; 12.534 ; 12.190 ;
+; SW[14]     ; LEDR[9]     ; 12.477 ; 12.248 ; 12.248 ; 12.477 ;
+; SW[15]     ; LEDG[8]     ; 13.961 ; 13.458 ; 13.458 ; 13.961 ;
+; SW[15]     ; LEDR[6]     ; 14.456 ; 14.296 ; 14.296 ; 14.456 ;
+; SW[15]     ; LEDR[7]     ; 14.090 ; 14.303 ; 14.303 ; 14.090 ;
+; SW[15]     ; LEDR[8]     ; 13.391 ; 12.644 ; 12.644 ; 13.391 ;
+; SW[15]     ; LEDR[9]     ; 13.338 ; 12.736 ; 12.736 ; 13.338 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++----------------------------------+
+; Fast Model Setup Summary         ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; CLOCK_50 ; 0.456 ; 0.000         ;
++----------+-------+---------------+
+
+
++-----------------------------------+
+; Fast Model Hold Summary           ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; CLOCK_50 ; -1.801 ; -3.554        ;
++----------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++--------------------------------------------+
+; Fast Model Minimum Pulse Width Summary     ;
++-------------------+--------+---------------+
+; Clock             ; Slack  ; End Point TNS ;
++-------------------+--------+---------------+
+; CLOCK_50          ; -1.380 ; -3.380        ;
+; maquina:inst|inst ; 0.500  ; 0.000         ;
++-------------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLOCK_50'                                                                                               ;
++-------+--------------------+--------------------+-------------------+-------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock      ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+-------------------+-------------+--------------+------------+------------+
+; 0.456 ; maquina:inst|inst2 ; maquina:inst|inst  ; CLOCK_50          ; CLOCK_50    ; 1.000        ; 0.000      ; 0.576      ;
+; 0.665 ; maquina:inst|inst2 ; maquina:inst|inst2 ; CLOCK_50          ; CLOCK_50    ; 1.000        ; 0.000      ; 0.367      ;
+; 1.673 ; maquina:inst|inst  ; maquina:inst|inst  ; maquina:inst|inst ; CLOCK_50    ; 0.500        ; 1.875      ; 0.875      ;
+; 2.133 ; maquina:inst|inst  ; maquina:inst|inst2 ; maquina:inst|inst ; CLOCK_50    ; 0.500        ; 1.875      ; 0.415      ;
+; 2.173 ; maquina:inst|inst  ; maquina:inst|inst  ; maquina:inst|inst ; CLOCK_50    ; 1.000        ; 1.875      ; 0.875      ;
+; 2.633 ; maquina:inst|inst  ; maquina:inst|inst2 ; maquina:inst|inst ; CLOCK_50    ; 1.000        ; 1.875      ; 0.415      ;
++-------+--------------------+--------------------+-------------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLOCK_50'                                                                                                 ;
++--------+--------------------+--------------------+-------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock      ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+-------------------+-------------+--------------+------------+------------+
+; -1.801 ; maquina:inst|inst  ; maquina:inst|inst  ; maquina:inst|inst ; CLOCK_50    ; 0.000        ; 1.875      ; 0.367      ;
+; -1.753 ; maquina:inst|inst  ; maquina:inst|inst2 ; maquina:inst|inst ; CLOCK_50    ; 0.000        ; 1.875      ; 0.415      ;
+; -1.301 ; maquina:inst|inst  ; maquina:inst|inst  ; maquina:inst|inst ; CLOCK_50    ; -0.500       ; 1.875      ; 0.367      ;
+; -1.253 ; maquina:inst|inst  ; maquina:inst|inst2 ; maquina:inst|inst ; CLOCK_50    ; -0.500       ; 1.875      ; 0.415      ;
+; 0.215  ; maquina:inst|inst2 ; maquina:inst|inst2 ; CLOCK_50          ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.424  ; maquina:inst|inst2 ; maquina:inst|inst  ; CLOCK_50          ; CLOCK_50    ; 0.000        ; 0.000      ; 0.576      ;
++--------+--------------------+--------------------+-------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLOCK_50'                                                             ;
++--------+--------------+----------------+------------------+----------+------------+--------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target             ;
++--------+--------------+----------------+------------------+----------+------------+--------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; maquina:inst|inst  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; maquina:inst|inst  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; maquina:inst|inst2 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; maquina:inst|inst2 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50|combout   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50|combout   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; inst|inst2|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; inst|inst2|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; inst|inst|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; inst|inst|clk      ;
++--------+--------------+----------------+------------------+----------+------------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'maquina:inst|inst'                                                                               ;
++-------+--------------+----------------+------------------+-------------------+------------+---------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock             ; Clock Edge ; Target                                ;
++-------+--------------+----------------+------------------+-------------------+------------+---------------------------------------+
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~0clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~0clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~0clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~0clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~0|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~0|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~0|datad           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~0|datad           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; inst|inst1|Decoder1~1clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; inst|inst1|Decoder1~1clkctrl|inclk[0] ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; inst|inst1|Decoder1~1clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; inst|inst1|Decoder1~1clkctrl|outclk   ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; inst|inst1|Decoder1~1|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; inst|inst1|Decoder1~1|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~1|datad           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~1|datad           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~2|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~2|combout         ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~2|datad           ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|Decoder1~2|datad           ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|E|datad                    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|E|datad                    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|N1[0]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|N1[0]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|N1[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|N1[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|N1[2]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|N1[2]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|N1[3]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|N1[3]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; inst|inst1|N2[0]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; inst|inst1|N2[0]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; inst|inst1|N2[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; inst|inst1|N2[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; inst|inst1|N2[2]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; inst|inst1|N2[2]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; inst|inst1|N2[3]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; inst|inst1|N2[3]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|OP[0]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|OP[0]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|OP[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|OP[1]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|OP[2]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|OP[2]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|OP[3]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|OP[3]|datad                ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|OP[3]~0clkctrl|inclk[0]    ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|OP[3]~0clkctrl|inclk[0]    ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|OP[3]~0clkctrl|outclk      ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|OP[3]~0clkctrl|outclk      ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|OP[3]~0|combout            ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|OP[3]~0|combout            ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst1|OP[3]~0|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst1|OP[3]~0|datad              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; inst|inst|regout                      ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; inst|inst|regout                      ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; maquina:inst|ROM:inst1|E              ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; maquina:inst|ROM:inst1|E              ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N1[0]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N1[0]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N1[1]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N1[1]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N1[2]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N1[2]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N1[3]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N1[3]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N2[0]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N2[0]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N2[1]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N2[1]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N2[2]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N2[2]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N2[3]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Rise       ; maquina:inst|ROM:inst1|N2[3]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; maquina:inst|ROM:inst1|OP[0]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; maquina:inst|ROM:inst1|OP[0]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; maquina:inst|ROM:inst1|OP[1]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; maquina:inst|ROM:inst1|OP[1]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; maquina:inst|ROM:inst1|OP[2]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; maquina:inst|ROM:inst1|OP[2]          ;
+; 0.500 ; 0.500        ; 0.000          ; High Pulse Width ; maquina:inst|inst ; Fall       ; maquina:inst|ROM:inst1|OP[3]          ;
+; 0.500 ; 0.500        ; 0.000          ; Low Pulse Width  ; maquina:inst|inst ; Fall       ; maquina:inst|ROM:inst1|OP[3]          ;
++-------+--------------+----------------+------------------+-------------------+------------+---------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Setup Times                                                                    ;
++-----------+-------------------+-------+-------+------------+-------------------+
+; Data Port ; Clock Port        ; Rise  ; Fall  ; Clock Edge ; Clock Reference   ;
++-----------+-------------------+-------+-------+------------+-------------------+
+; SW[*]     ; CLOCK_50          ; 5.976 ; 5.976 ; Rise       ; CLOCK_50          ;
+;  SW[0]    ; CLOCK_50          ; 2.784 ; 2.784 ; Rise       ; CLOCK_50          ;
+;  SW[1]    ; CLOCK_50          ; 2.952 ; 2.952 ; Rise       ; CLOCK_50          ;
+;  SW[2]    ; CLOCK_50          ; 2.630 ; 2.630 ; Rise       ; CLOCK_50          ;
+;  SW[3]    ; CLOCK_50          ; 2.732 ; 2.732 ; Rise       ; CLOCK_50          ;
+;  SW[4]    ; CLOCK_50          ; 2.313 ; 2.313 ; Rise       ; CLOCK_50          ;
+;  SW[5]    ; CLOCK_50          ; 2.791 ; 2.791 ; Rise       ; CLOCK_50          ;
+;  SW[6]    ; CLOCK_50          ; 2.677 ; 2.677 ; Rise       ; CLOCK_50          ;
+;  SW[7]    ; CLOCK_50          ; 2.718 ; 2.718 ; Rise       ; CLOCK_50          ;
+;  SW[8]    ; CLOCK_50          ; 3.023 ; 3.023 ; Rise       ; CLOCK_50          ;
+;  SW[9]    ; CLOCK_50          ; 3.388 ; 3.388 ; Rise       ; CLOCK_50          ;
+;  SW[10]   ; CLOCK_50          ; 3.212 ; 3.212 ; Rise       ; CLOCK_50          ;
+;  SW[11]   ; CLOCK_50          ; 3.690 ; 3.690 ; Rise       ; CLOCK_50          ;
+;  SW[12]   ; CLOCK_50          ; 3.408 ; 3.408 ; Rise       ; CLOCK_50          ;
+;  SW[13]   ; CLOCK_50          ; 5.809 ; 5.809 ; Rise       ; CLOCK_50          ;
+;  SW[14]   ; CLOCK_50          ; 5.976 ; 5.976 ; Rise       ; CLOCK_50          ;
+;  SW[15]   ; CLOCK_50          ; 5.635 ; 5.635 ; Rise       ; CLOCK_50          ;
+; SW[*]     ; maquina:inst|inst ; 6.949 ; 6.949 ; Rise       ; maquina:inst|inst ;
+;  SW[0]    ; maquina:inst|inst ; 3.785 ; 3.785 ; Rise       ; maquina:inst|inst ;
+;  SW[1]    ; maquina:inst|inst ; 3.925 ; 3.925 ; Rise       ; maquina:inst|inst ;
+;  SW[2]    ; maquina:inst|inst ; 3.603 ; 3.603 ; Rise       ; maquina:inst|inst ;
+;  SW[3]    ; maquina:inst|inst ; 3.785 ; 3.785 ; Rise       ; maquina:inst|inst ;
+;  SW[4]    ; maquina:inst|inst ; 3.366 ; 3.366 ; Rise       ; maquina:inst|inst ;
+;  SW[5]    ; maquina:inst|inst ; 3.844 ; 3.844 ; Rise       ; maquina:inst|inst ;
+;  SW[6]    ; maquina:inst|inst ; 3.730 ; 3.730 ; Rise       ; maquina:inst|inst ;
+;  SW[7]    ; maquina:inst|inst ; 3.771 ; 3.771 ; Rise       ; maquina:inst|inst ;
+;  SW[8]    ; maquina:inst|inst ; 3.996 ; 3.996 ; Rise       ; maquina:inst|inst ;
+;  SW[9]    ; maquina:inst|inst ; 4.361 ; 4.361 ; Rise       ; maquina:inst|inst ;
+;  SW[10]   ; maquina:inst|inst ; 4.185 ; 4.185 ; Rise       ; maquina:inst|inst ;
+;  SW[11]   ; maquina:inst|inst ; 4.663 ; 4.663 ; Rise       ; maquina:inst|inst ;
+;  SW[12]   ; maquina:inst|inst ; 4.381 ; 4.381 ; Rise       ; maquina:inst|inst ;
+;  SW[13]   ; maquina:inst|inst ; 6.782 ; 6.782 ; Rise       ; maquina:inst|inst ;
+;  SW[14]   ; maquina:inst|inst ; 6.949 ; 6.949 ; Rise       ; maquina:inst|inst ;
+;  SW[15]   ; maquina:inst|inst ; 6.608 ; 6.608 ; Rise       ; maquina:inst|inst ;
+; SW[*]     ; maquina:inst|inst ; 7.644 ; 7.644 ; Fall       ; maquina:inst|inst ;
+;  SW[0]    ; maquina:inst|inst ; 4.452 ; 4.452 ; Fall       ; maquina:inst|inst ;
+;  SW[1]    ; maquina:inst|inst ; 4.620 ; 4.620 ; Fall       ; maquina:inst|inst ;
+;  SW[2]    ; maquina:inst|inst ; 4.298 ; 4.298 ; Fall       ; maquina:inst|inst ;
+;  SW[3]    ; maquina:inst|inst ; 4.393 ; 4.393 ; Fall       ; maquina:inst|inst ;
+;  SW[4]    ; maquina:inst|inst ; 3.974 ; 3.974 ; Fall       ; maquina:inst|inst ;
+;  SW[5]    ; maquina:inst|inst ; 4.452 ; 4.452 ; Fall       ; maquina:inst|inst ;
+;  SW[6]    ; maquina:inst|inst ; 4.338 ; 4.338 ; Fall       ; maquina:inst|inst ;
+;  SW[7]    ; maquina:inst|inst ; 4.379 ; 4.379 ; Fall       ; maquina:inst|inst ;
+;  SW[8]    ; maquina:inst|inst ; 4.691 ; 4.691 ; Fall       ; maquina:inst|inst ;
+;  SW[9]    ; maquina:inst|inst ; 5.056 ; 5.056 ; Fall       ; maquina:inst|inst ;
+;  SW[10]   ; maquina:inst|inst ; 4.880 ; 4.880 ; Fall       ; maquina:inst|inst ;
+;  SW[11]   ; maquina:inst|inst ; 5.358 ; 5.358 ; Fall       ; maquina:inst|inst ;
+;  SW[12]   ; maquina:inst|inst ; 5.076 ; 5.076 ; Fall       ; maquina:inst|inst ;
+;  SW[13]   ; maquina:inst|inst ; 7.477 ; 7.477 ; Fall       ; maquina:inst|inst ;
+;  SW[14]   ; maquina:inst|inst ; 7.644 ; 7.644 ; Fall       ; maquina:inst|inst ;
+;  SW[15]   ; maquina:inst|inst ; 7.303 ; 7.303 ; Fall       ; maquina:inst|inst ;
++-----------+-------------------+-------+-------+------------+-------------------+
+
+
++----------------------------------------------------------------------------------+
+; Hold Times                                                                       ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; Data Port ; Clock Port        ; Rise   ; Fall   ; Clock Edge ; Clock Reference   ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; SW[*]     ; CLOCK_50          ; -0.166 ; -0.166 ; Rise       ; CLOCK_50          ;
+;  SW[0]    ; CLOCK_50          ; -1.181 ; -1.181 ; Rise       ; CLOCK_50          ;
+;  SW[1]    ; CLOCK_50          ; -1.124 ; -1.124 ; Rise       ; CLOCK_50          ;
+;  SW[2]    ; CLOCK_50          ; -0.981 ; -0.981 ; Rise       ; CLOCK_50          ;
+;  SW[3]    ; CLOCK_50          ; -0.178 ; -0.178 ; Rise       ; CLOCK_50          ;
+;  SW[4]    ; CLOCK_50          ; -0.256 ; -0.256 ; Rise       ; CLOCK_50          ;
+;  SW[5]    ; CLOCK_50          ; -0.402 ; -0.402 ; Rise       ; CLOCK_50          ;
+;  SW[6]    ; CLOCK_50          ; -0.166 ; -0.166 ; Rise       ; CLOCK_50          ;
+;  SW[7]    ; CLOCK_50          ; -1.290 ; -1.290 ; Rise       ; CLOCK_50          ;
+;  SW[8]    ; CLOCK_50          ; -1.189 ; -1.189 ; Rise       ; CLOCK_50          ;
+;  SW[9]    ; CLOCK_50          ; -1.248 ; -1.248 ; Rise       ; CLOCK_50          ;
+;  SW[10]   ; CLOCK_50          ; -1.177 ; -1.177 ; Rise       ; CLOCK_50          ;
+;  SW[11]   ; CLOCK_50          ; -1.211 ; -1.211 ; Rise       ; CLOCK_50          ;
+;  SW[12]   ; CLOCK_50          ; -1.066 ; -1.066 ; Rise       ; CLOCK_50          ;
+;  SW[13]   ; CLOCK_50          ; -3.336 ; -3.336 ; Rise       ; CLOCK_50          ;
+;  SW[14]   ; CLOCK_50          ; -3.381 ; -3.381 ; Rise       ; CLOCK_50          ;
+;  SW[15]   ; CLOCK_50          ; -3.652 ; -3.652 ; Rise       ; CLOCK_50          ;
+; SW[*]     ; maquina:inst|inst ; -0.667 ; -0.667 ; Rise       ; maquina:inst|inst ;
+;  SW[0]    ; maquina:inst|inst ; -1.805 ; -1.805 ; Rise       ; maquina:inst|inst ;
+;  SW[1]    ; maquina:inst|inst ; -1.625 ; -1.625 ; Rise       ; maquina:inst|inst ;
+;  SW[2]    ; maquina:inst|inst ; -1.482 ; -1.482 ; Rise       ; maquina:inst|inst ;
+;  SW[3]    ; maquina:inst|inst ; -0.773 ; -0.773 ; Rise       ; maquina:inst|inst ;
+;  SW[4]    ; maquina:inst|inst ; -0.765 ; -0.765 ; Rise       ; maquina:inst|inst ;
+;  SW[5]    ; maquina:inst|inst ; -0.997 ; -0.997 ; Rise       ; maquina:inst|inst ;
+;  SW[6]    ; maquina:inst|inst ; -0.667 ; -0.667 ; Rise       ; maquina:inst|inst ;
+;  SW[7]    ; maquina:inst|inst ; -1.791 ; -1.791 ; Rise       ; maquina:inst|inst ;
+;  SW[8]    ; maquina:inst|inst ; -1.681 ; -1.681 ; Rise       ; maquina:inst|inst ;
+;  SW[9]    ; maquina:inst|inst ; -1.867 ; -1.867 ; Rise       ; maquina:inst|inst ;
+;  SW[10]   ; maquina:inst|inst ; -1.796 ; -1.796 ; Rise       ; maquina:inst|inst ;
+;  SW[11]   ; maquina:inst|inst ; -1.759 ; -1.759 ; Rise       ; maquina:inst|inst ;
+;  SW[12]   ; maquina:inst|inst ; -1.629 ; -1.629 ; Rise       ; maquina:inst|inst ;
+;  SW[13]   ; maquina:inst|inst ; -3.878 ; -3.878 ; Rise       ; maquina:inst|inst ;
+;  SW[14]   ; maquina:inst|inst ; -3.928 ; -3.928 ; Rise       ; maquina:inst|inst ;
+;  SW[15]   ; maquina:inst|inst ; -4.162 ; -4.162 ; Rise       ; maquina:inst|inst ;
+; SW[*]     ; maquina:inst|inst ; -0.407 ; -0.407 ; Fall       ; maquina:inst|inst ;
+;  SW[0]    ; maquina:inst|inst ; -1.332 ; -1.332 ; Fall       ; maquina:inst|inst ;
+;  SW[1]    ; maquina:inst|inst ; -1.501 ; -1.501 ; Fall       ; maquina:inst|inst ;
+;  SW[2]    ; maquina:inst|inst ; -1.179 ; -1.179 ; Fall       ; maquina:inst|inst ;
+;  SW[3]    ; maquina:inst|inst ; -0.459 ; -0.459 ; Fall       ; maquina:inst|inst ;
+;  SW[4]    ; maquina:inst|inst ; -0.407 ; -0.407 ; Fall       ; maquina:inst|inst ;
+;  SW[5]    ; maquina:inst|inst ; -0.683 ; -0.683 ; Fall       ; maquina:inst|inst ;
+;  SW[6]    ; maquina:inst|inst ; -0.572 ; -0.572 ; Fall       ; maquina:inst|inst ;
+;  SW[7]    ; maquina:inst|inst ; -1.463 ; -1.463 ; Fall       ; maquina:inst|inst ;
+;  SW[8]    ; maquina:inst|inst ; -1.450 ; -1.450 ; Fall       ; maquina:inst|inst ;
+;  SW[9]    ; maquina:inst|inst ; -1.529 ; -1.529 ; Fall       ; maquina:inst|inst ;
+;  SW[10]   ; maquina:inst|inst ; -1.458 ; -1.458 ; Fall       ; maquina:inst|inst ;
+;  SW[11]   ; maquina:inst|inst ; -1.362 ; -1.362 ; Fall       ; maquina:inst|inst ;
+;  SW[12]   ; maquina:inst|inst ; -1.217 ; -1.217 ; Fall       ; maquina:inst|inst ;
+;  SW[13]   ; maquina:inst|inst ; -3.487 ; -3.487 ; Fall       ; maquina:inst|inst ;
+;  SW[14]   ; maquina:inst|inst ; -3.653 ; -3.653 ; Fall       ; maquina:inst|inst ;
+;  SW[15]   ; maquina:inst|inst ; -3.852 ; -3.852 ; Fall       ; maquina:inst|inst ;
++-----------+-------------------+--------+--------+------------+-------------------+
+
+
++----------------------------------------------------------------------------------+
+; Clock to Output Times                                                            ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; Data Port ; Clock Port        ; Rise   ; Fall   ; Clock Edge ; Clock Reference   ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; LEDR[*]   ; CLOCK_50          ; 4.767  ; 4.767  ; Rise       ; CLOCK_50          ;
+;  LEDR[1]  ; CLOCK_50          ; 4.767  ; 4.767  ; Rise       ; CLOCK_50          ;
+; HEX0[*]   ; maquina:inst|inst ; 12.557 ; 12.557 ; Rise       ; maquina:inst|inst ;
+;  HEX0[0]  ; maquina:inst|inst ; 12.557 ; 12.557 ; Rise       ; maquina:inst|inst ;
+;  HEX0[1]  ; maquina:inst|inst ; 12.518 ; 12.518 ; Rise       ; maquina:inst|inst ;
+;  HEX0[2]  ; maquina:inst|inst ; 12.529 ; 12.529 ; Rise       ; maquina:inst|inst ;
+;  HEX0[3]  ; maquina:inst|inst ; 12.448 ; 12.448 ; Rise       ; maquina:inst|inst ;
+;  HEX0[4]  ; maquina:inst|inst ; 12.432 ; 12.432 ; Rise       ; maquina:inst|inst ;
+;  HEX0[5]  ; maquina:inst|inst ; 12.435 ; 12.435 ; Rise       ; maquina:inst|inst ;
+;  HEX0[6]  ; maquina:inst|inst ; 12.433 ; 12.433 ; Rise       ; maquina:inst|inst ;
+; HEX1[*]   ; maquina:inst|inst ; 20.067 ; 20.067 ; Rise       ; maquina:inst|inst ;
+;  HEX1[0]  ; maquina:inst|inst ; 20.050 ; 20.050 ; Rise       ; maquina:inst|inst ;
+;  HEX1[1]  ; maquina:inst|inst ; 20.027 ; 20.027 ; Rise       ; maquina:inst|inst ;
+;  HEX1[2]  ; maquina:inst|inst ; 20.024 ; 20.024 ; Rise       ; maquina:inst|inst ;
+;  HEX1[3]  ; maquina:inst|inst ; 20.052 ; 20.052 ; Rise       ; maquina:inst|inst ;
+;  HEX1[4]  ; maquina:inst|inst ; 19.922 ; 19.922 ; Rise       ; maquina:inst|inst ;
+;  HEX1[5]  ; maquina:inst|inst ; 20.046 ; 20.046 ; Rise       ; maquina:inst|inst ;
+;  HEX1[6]  ; maquina:inst|inst ; 20.067 ; 20.067 ; Rise       ; maquina:inst|inst ;
+; HEX2[*]   ; maquina:inst|inst ; 6.629  ; 6.629  ; Rise       ; maquina:inst|inst ;
+;  HEX2[0]  ; maquina:inst|inst ; 6.596  ; 6.596  ; Rise       ; maquina:inst|inst ;
+;  HEX2[1]  ; maquina:inst|inst ; 6.579  ; 6.579  ; Rise       ; maquina:inst|inst ;
+;  HEX2[2]  ; maquina:inst|inst ; 6.619  ; 6.619  ; Rise       ; maquina:inst|inst ;
+;  HEX2[3]  ; maquina:inst|inst ; 6.629  ; 6.629  ; Rise       ; maquina:inst|inst ;
+;  HEX2[4]  ; maquina:inst|inst ; 6.480  ; 6.480  ; Rise       ; maquina:inst|inst ;
+;  HEX2[5]  ; maquina:inst|inst ; 6.480  ; 6.480  ; Rise       ; maquina:inst|inst ;
+;  HEX2[6]  ; maquina:inst|inst ; 6.470  ; 6.470  ; Rise       ; maquina:inst|inst ;
+; HEX4[*]   ; maquina:inst|inst ; 5.159  ; 5.159  ; Rise       ; maquina:inst|inst ;
+;  HEX4[0]  ; maquina:inst|inst ; 5.009  ; 5.009  ; Rise       ; maquina:inst|inst ;
+;  HEX4[1]  ; maquina:inst|inst ; 5.022  ; 5.022  ; Rise       ; maquina:inst|inst ;
+;  HEX4[2]  ; maquina:inst|inst ; 5.022  ; 5.022  ; Rise       ; maquina:inst|inst ;
+;  HEX4[3]  ; maquina:inst|inst ; 5.133  ; 5.133  ; Rise       ; maquina:inst|inst ;
+;  HEX4[4]  ; maquina:inst|inst ; 5.018  ; 5.018  ; Rise       ; maquina:inst|inst ;
+;  HEX4[5]  ; maquina:inst|inst ; 5.153  ; 5.153  ; Rise       ; maquina:inst|inst ;
+;  HEX4[6]  ; maquina:inst|inst ; 5.159  ; 5.159  ; Rise       ; maquina:inst|inst ;
+; HEX6[*]   ; maquina:inst|inst ; 5.199  ; 5.199  ; Rise       ; maquina:inst|inst ;
+;  HEX6[0]  ; maquina:inst|inst ; 4.909  ; 4.909  ; Rise       ; maquina:inst|inst ;
+;  HEX6[1]  ; maquina:inst|inst ; 4.910  ; 4.910  ; Rise       ; maquina:inst|inst ;
+;  HEX6[2]  ; maquina:inst|inst ; 4.913  ; 4.913  ; Rise       ; maquina:inst|inst ;
+;  HEX6[3]  ; maquina:inst|inst ; 5.199  ; 5.199  ; Rise       ; maquina:inst|inst ;
+;  HEX6[4]  ; maquina:inst|inst ; 5.193  ; 5.193  ; Rise       ; maquina:inst|inst ;
+;  HEX6[5]  ; maquina:inst|inst ; 5.179  ; 5.179  ; Rise       ; maquina:inst|inst ;
+;  HEX6[6]  ; maquina:inst|inst ; 5.162  ; 5.162  ; Rise       ; maquina:inst|inst ;
+; LEDR[*]   ; maquina:inst|inst ; 3.758  ; 3.758  ; Rise       ; maquina:inst|inst ;
+;  LEDR[0]  ; maquina:inst|inst ; 2.719  ;        ; Rise       ; maquina:inst|inst ;
+;  LEDR[10] ; maquina:inst|inst ; 3.451  ; 3.451  ; Rise       ; maquina:inst|inst ;
+;  LEDR[11] ; maquina:inst|inst ; 3.758  ; 3.758  ; Rise       ; maquina:inst|inst ;
+;  LEDR[12] ; maquina:inst|inst ; 3.603  ; 3.603  ; Rise       ; maquina:inst|inst ;
+;  LEDR[13] ; maquina:inst|inst ; 3.336  ; 3.336  ; Rise       ; maquina:inst|inst ;
+;  LEDR[14] ; maquina:inst|inst ; 3.456  ; 3.456  ; Rise       ; maquina:inst|inst ;
+;  LEDR[15] ; maquina:inst|inst ; 3.461  ; 3.461  ; Rise       ; maquina:inst|inst ;
+;  LEDR[16] ; maquina:inst|inst ; 3.523  ; 3.523  ; Rise       ; maquina:inst|inst ;
+;  LEDR[17] ; maquina:inst|inst ; 3.468  ; 3.468  ; Rise       ; maquina:inst|inst ;
+; HEX0[*]   ; maquina:inst|inst ; 11.380 ; 11.380 ; Fall       ; maquina:inst|inst ;
+;  HEX0[0]  ; maquina:inst|inst ; 11.380 ; 11.380 ; Fall       ; maquina:inst|inst ;
+;  HEX0[1]  ; maquina:inst|inst ; 11.341 ; 11.341 ; Fall       ; maquina:inst|inst ;
+;  HEX0[2]  ; maquina:inst|inst ; 11.352 ; 11.352 ; Fall       ; maquina:inst|inst ;
+;  HEX0[3]  ; maquina:inst|inst ; 11.271 ; 11.271 ; Fall       ; maquina:inst|inst ;
+;  HEX0[4]  ; maquina:inst|inst ; 11.255 ; 11.255 ; Fall       ; maquina:inst|inst ;
+;  HEX0[5]  ; maquina:inst|inst ; 11.258 ; 11.258 ; Fall       ; maquina:inst|inst ;
+;  HEX0[6]  ; maquina:inst|inst ; 11.256 ; 11.256 ; Fall       ; maquina:inst|inst ;
+; HEX1[*]   ; maquina:inst|inst ; 18.890 ; 18.890 ; Fall       ; maquina:inst|inst ;
+;  HEX1[0]  ; maquina:inst|inst ; 18.873 ; 18.873 ; Fall       ; maquina:inst|inst ;
+;  HEX1[1]  ; maquina:inst|inst ; 18.850 ; 18.850 ; Fall       ; maquina:inst|inst ;
+;  HEX1[2]  ; maquina:inst|inst ; 18.847 ; 18.847 ; Fall       ; maquina:inst|inst ;
+;  HEX1[3]  ; maquina:inst|inst ; 18.875 ; 18.875 ; Fall       ; maquina:inst|inst ;
+;  HEX1[4]  ; maquina:inst|inst ; 18.745 ; 18.745 ; Fall       ; maquina:inst|inst ;
+;  HEX1[5]  ; maquina:inst|inst ; 18.869 ; 18.869 ; Fall       ; maquina:inst|inst ;
+;  HEX1[6]  ; maquina:inst|inst ; 18.890 ; 18.890 ; Fall       ; maquina:inst|inst ;
+; HEX2[*]   ; maquina:inst|inst ; 5.400  ; 5.400  ; Fall       ; maquina:inst|inst ;
+;  HEX2[0]  ; maquina:inst|inst ; 5.367  ; 5.367  ; Fall       ; maquina:inst|inst ;
+;  HEX2[1]  ; maquina:inst|inst ; 5.350  ; 5.350  ; Fall       ; maquina:inst|inst ;
+;  HEX2[2]  ; maquina:inst|inst ; 5.390  ; 5.390  ; Fall       ; maquina:inst|inst ;
+;  HEX2[3]  ; maquina:inst|inst ; 5.400  ; 5.400  ; Fall       ; maquina:inst|inst ;
+;  HEX2[4]  ; maquina:inst|inst ; 5.251  ; 5.251  ; Fall       ; maquina:inst|inst ;
+;  HEX2[5]  ; maquina:inst|inst ; 5.251  ; 5.251  ; Fall       ; maquina:inst|inst ;
+;  HEX2[6]  ; maquina:inst|inst ; 5.241  ; 5.241  ; Fall       ; maquina:inst|inst ;
+; LEDG[*]   ; maquina:inst|inst ; 4.453  ; 4.453  ; Fall       ; maquina:inst|inst ;
+;  LEDG[0]  ; maquina:inst|inst ; 4.453  ; 4.453  ; Fall       ; maquina:inst|inst ;
+;  LEDG[1]  ; maquina:inst|inst ; 4.104  ; 4.104  ; Fall       ; maquina:inst|inst ;
+; LEDR[*]   ; maquina:inst|inst ;        ; 2.719  ; Fall       ; maquina:inst|inst ;
+;  LEDR[0]  ; maquina:inst|inst ;        ; 2.719  ; Fall       ; maquina:inst|inst ;
++-----------+-------------------+--------+--------+------------+-------------------+
+
+
++--------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                  ;
++-----------+-------------------+-------+-------+------------+-------------------+
+; Data Port ; Clock Port        ; Rise  ; Fall  ; Clock Edge ; Clock Reference   ;
++-----------+-------------------+-------+-------+------------+-------------------+
+; LEDR[*]   ; CLOCK_50          ; 4.767 ; 4.767 ; Rise       ; CLOCK_50          ;
+;  LEDR[1]  ; CLOCK_50          ; 4.767 ; 4.767 ; Rise       ; CLOCK_50          ;
+; HEX0[*]   ; maquina:inst|inst ; 5.168 ; 5.168 ; Rise       ; maquina:inst|inst ;
+;  HEX0[0]  ; maquina:inst|inst ; 5.293 ; 5.293 ; Rise       ; maquina:inst|inst ;
+;  HEX0[1]  ; maquina:inst|inst ; 5.254 ; 5.254 ; Rise       ; maquina:inst|inst ;
+;  HEX0[2]  ; maquina:inst|inst ; 5.260 ; 5.260 ; Rise       ; maquina:inst|inst ;
+;  HEX0[3]  ; maquina:inst|inst ; 5.184 ; 5.184 ; Rise       ; maquina:inst|inst ;
+;  HEX0[4]  ; maquina:inst|inst ; 5.168 ; 5.168 ; Rise       ; maquina:inst|inst ;
+;  HEX0[5]  ; maquina:inst|inst ; 5.175 ; 5.175 ; Rise       ; maquina:inst|inst ;
+;  HEX0[6]  ; maquina:inst|inst ; 5.170 ; 5.170 ; Rise       ; maquina:inst|inst ;
+; HEX1[*]   ; maquina:inst|inst ; 6.502 ; 6.502 ; Rise       ; maquina:inst|inst ;
+;  HEX1[0]  ; maquina:inst|inst ; 6.630 ; 6.630 ; Rise       ; maquina:inst|inst ;
+;  HEX1[1]  ; maquina:inst|inst ; 6.607 ; 6.607 ; Rise       ; maquina:inst|inst ;
+;  HEX1[2]  ; maquina:inst|inst ; 6.604 ; 6.604 ; Rise       ; maquina:inst|inst ;
+;  HEX1[3]  ; maquina:inst|inst ; 6.632 ; 6.632 ; Rise       ; maquina:inst|inst ;
+;  HEX1[4]  ; maquina:inst|inst ; 6.502 ; 6.502 ; Rise       ; maquina:inst|inst ;
+;  HEX1[5]  ; maquina:inst|inst ; 6.626 ; 6.626 ; Rise       ; maquina:inst|inst ;
+;  HEX1[6]  ; maquina:inst|inst ; 6.647 ; 6.647 ; Rise       ; maquina:inst|inst ;
+; HEX2[*]   ; maquina:inst|inst ; 5.008 ; 5.008 ; Rise       ; maquina:inst|inst ;
+;  HEX2[0]  ; maquina:inst|inst ; 5.134 ; 5.134 ; Rise       ; maquina:inst|inst ;
+;  HEX2[1]  ; maquina:inst|inst ; 5.117 ; 5.117 ; Rise       ; maquina:inst|inst ;
+;  HEX2[2]  ; maquina:inst|inst ; 5.157 ; 5.157 ; Rise       ; maquina:inst|inst ;
+;  HEX2[3]  ; maquina:inst|inst ; 5.167 ; 5.167 ; Rise       ; maquina:inst|inst ;
+;  HEX2[4]  ; maquina:inst|inst ; 5.018 ; 5.018 ; Rise       ; maquina:inst|inst ;
+;  HEX2[5]  ; maquina:inst|inst ; 5.018 ; 5.018 ; Rise       ; maquina:inst|inst ;
+;  HEX2[6]  ; maquina:inst|inst ; 5.008 ; 5.008 ; Rise       ; maquina:inst|inst ;
+; HEX4[*]   ; maquina:inst|inst ; 4.811 ; 4.811 ; Rise       ; maquina:inst|inst ;
+;  HEX4[0]  ; maquina:inst|inst ; 4.811 ; 4.811 ; Rise       ; maquina:inst|inst ;
+;  HEX4[1]  ; maquina:inst|inst ; 4.817 ; 4.817 ; Rise       ; maquina:inst|inst ;
+;  HEX4[2]  ; maquina:inst|inst ; 4.817 ; 4.817 ; Rise       ; maquina:inst|inst ;
+;  HEX4[3]  ; maquina:inst|inst ; 4.924 ; 4.924 ; Rise       ; maquina:inst|inst ;
+;  HEX4[4]  ; maquina:inst|inst ; 4.817 ; 4.817 ; Rise       ; maquina:inst|inst ;
+;  HEX4[5]  ; maquina:inst|inst ; 4.954 ; 4.954 ; Rise       ; maquina:inst|inst ;
+;  HEX4[6]  ; maquina:inst|inst ; 4.952 ; 4.952 ; Rise       ; maquina:inst|inst ;
+; HEX6[*]   ; maquina:inst|inst ; 4.665 ; 4.665 ; Rise       ; maquina:inst|inst ;
+;  HEX6[0]  ; maquina:inst|inst ; 4.665 ; 4.665 ; Rise       ; maquina:inst|inst ;
+;  HEX6[1]  ; maquina:inst|inst ; 4.672 ; 4.672 ; Rise       ; maquina:inst|inst ;
+;  HEX6[2]  ; maquina:inst|inst ; 4.678 ; 4.678 ; Rise       ; maquina:inst|inst ;
+;  HEX6[3]  ; maquina:inst|inst ; 4.967 ; 4.967 ; Rise       ; maquina:inst|inst ;
+;  HEX6[4]  ; maquina:inst|inst ; 4.957 ; 4.957 ; Rise       ; maquina:inst|inst ;
+;  HEX6[5]  ; maquina:inst|inst ; 4.947 ; 4.947 ; Rise       ; maquina:inst|inst ;
+;  HEX6[6]  ; maquina:inst|inst ; 4.928 ; 4.928 ; Rise       ; maquina:inst|inst ;
+; LEDR[*]   ; maquina:inst|inst ; 2.719 ; 3.336 ; Rise       ; maquina:inst|inst ;
+;  LEDR[0]  ; maquina:inst|inst ; 2.719 ;       ; Rise       ; maquina:inst|inst ;
+;  LEDR[10] ; maquina:inst|inst ; 3.451 ; 3.451 ; Rise       ; maquina:inst|inst ;
+;  LEDR[11] ; maquina:inst|inst ; 3.758 ; 3.758 ; Rise       ; maquina:inst|inst ;
+;  LEDR[12] ; maquina:inst|inst ; 3.603 ; 3.603 ; Rise       ; maquina:inst|inst ;
+;  LEDR[13] ; maquina:inst|inst ; 3.336 ; 3.336 ; Rise       ; maquina:inst|inst ;
+;  LEDR[14] ; maquina:inst|inst ; 3.456 ; 3.456 ; Rise       ; maquina:inst|inst ;
+;  LEDR[15] ; maquina:inst|inst ; 3.461 ; 3.461 ; Rise       ; maquina:inst|inst ;
+;  LEDR[16] ; maquina:inst|inst ; 3.523 ; 3.523 ; Rise       ; maquina:inst|inst ;
+;  LEDR[17] ; maquina:inst|inst ; 3.468 ; 3.468 ; Rise       ; maquina:inst|inst ;
+; HEX0[*]   ; maquina:inst|inst ; 3.987 ; 3.987 ; Fall       ; maquina:inst|inst ;
+;  HEX0[0]  ; maquina:inst|inst ; 4.112 ; 4.112 ; Fall       ; maquina:inst|inst ;
+;  HEX0[1]  ; maquina:inst|inst ; 4.073 ; 4.073 ; Fall       ; maquina:inst|inst ;
+;  HEX0[2]  ; maquina:inst|inst ; 4.079 ; 4.079 ; Fall       ; maquina:inst|inst ;
+;  HEX0[3]  ; maquina:inst|inst ; 4.003 ; 4.003 ; Fall       ; maquina:inst|inst ;
+;  HEX0[4]  ; maquina:inst|inst ; 3.987 ; 3.987 ; Fall       ; maquina:inst|inst ;
+;  HEX0[5]  ; maquina:inst|inst ; 3.994 ; 3.994 ; Fall       ; maquina:inst|inst ;
+;  HEX0[6]  ; maquina:inst|inst ; 3.989 ; 3.989 ; Fall       ; maquina:inst|inst ;
+; HEX1[*]   ; maquina:inst|inst ; 5.429 ; 5.429 ; Fall       ; maquina:inst|inst ;
+;  HEX1[0]  ; maquina:inst|inst ; 5.574 ; 5.574 ; Fall       ; maquina:inst|inst ;
+;  HEX1[1]  ; maquina:inst|inst ; 5.548 ; 5.548 ; Fall       ; maquina:inst|inst ;
+;  HEX1[2]  ; maquina:inst|inst ; 5.537 ; 5.537 ; Fall       ; maquina:inst|inst ;
+;  HEX1[3]  ; maquina:inst|inst ; 5.573 ; 5.573 ; Fall       ; maquina:inst|inst ;
+;  HEX1[4]  ; maquina:inst|inst ; 5.429 ; 5.429 ; Fall       ; maquina:inst|inst ;
+;  HEX1[5]  ; maquina:inst|inst ; 5.554 ; 5.554 ; Fall       ; maquina:inst|inst ;
+;  HEX1[6]  ; maquina:inst|inst ; 5.578 ; 5.578 ; Fall       ; maquina:inst|inst ;
+; HEX2[*]   ; maquina:inst|inst ; 4.005 ; 4.005 ; Fall       ; maquina:inst|inst ;
+;  HEX2[0]  ; maquina:inst|inst ; 4.131 ; 4.131 ; Fall       ; maquina:inst|inst ;
+;  HEX2[1]  ; maquina:inst|inst ; 4.114 ; 4.114 ; Fall       ; maquina:inst|inst ;
+;  HEX2[2]  ; maquina:inst|inst ; 4.154 ; 4.154 ; Fall       ; maquina:inst|inst ;
+;  HEX2[3]  ; maquina:inst|inst ; 4.164 ; 4.164 ; Fall       ; maquina:inst|inst ;
+;  HEX2[4]  ; maquina:inst|inst ; 4.015 ; 4.015 ; Fall       ; maquina:inst|inst ;
+;  HEX2[5]  ; maquina:inst|inst ; 4.015 ; 4.015 ; Fall       ; maquina:inst|inst ;
+;  HEX2[6]  ; maquina:inst|inst ; 4.005 ; 4.005 ; Fall       ; maquina:inst|inst ;
+; LEDG[*]   ; maquina:inst|inst ; 4.054 ; 4.054 ; Fall       ; maquina:inst|inst ;
+;  LEDG[0]  ; maquina:inst|inst ; 4.324 ; 4.324 ; Fall       ; maquina:inst|inst ;
+;  LEDG[1]  ; maquina:inst|inst ; 4.054 ; 4.054 ; Fall       ; maquina:inst|inst ;
+; LEDR[*]   ; maquina:inst|inst ;       ; 2.719 ; Fall       ; maquina:inst|inst ;
+;  LEDR[0]  ; maquina:inst|inst ;       ; 2.719 ; Fall       ; maquina:inst|inst ;
++-----------+-------------------+-------+-------+------------+-------------------+
+
+
++--------------------------------------------------------------+
+; Propagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; KEY[0]     ; HEX0[0]     ; 13.404 ; 13.404 ; 13.404 ; 13.404 ;
+; KEY[0]     ; HEX0[1]     ; 13.365 ; 13.365 ; 13.365 ; 13.365 ;
+; KEY[0]     ; HEX0[2]     ; 13.376 ; 13.376 ; 13.376 ; 13.376 ;
+; KEY[0]     ; HEX0[3]     ; 13.295 ; 13.295 ; 13.295 ; 13.295 ;
+; KEY[0]     ; HEX0[4]     ; 13.279 ; 13.279 ; 13.279 ; 13.279 ;
+; KEY[0]     ; HEX0[5]     ; 13.282 ; 13.282 ; 13.282 ; 13.282 ;
+; KEY[0]     ; HEX0[6]     ; 13.280 ; 13.280 ; 13.280 ; 13.280 ;
+; KEY[0]     ; HEX1[0]     ; 20.897 ; 20.897 ; 20.897 ; 20.897 ;
+; KEY[0]     ; HEX1[1]     ; 20.874 ; 20.874 ; 20.874 ; 20.874 ;
+; KEY[0]     ; HEX1[2]     ; 20.871 ; 20.871 ; 20.871 ; 20.871 ;
+; KEY[0]     ; HEX1[3]     ; 20.899 ; 20.899 ; 20.899 ; 20.899 ;
+; KEY[0]     ; HEX1[4]     ; 20.769 ; 20.769 ; 20.769 ; 20.769 ;
+; KEY[0]     ; HEX1[5]     ; 20.893 ; 20.893 ; 20.893 ; 20.893 ;
+; KEY[0]     ; HEX1[6]     ; 20.914 ; 20.914 ; 20.914 ; 20.914 ;
+; KEY[0]     ; HEX2[0]     ; 7.740  ;        ;        ; 7.740  ;
+; KEY[0]     ; HEX2[1]     ; 7.723  ;        ;        ; 7.723  ;
+; KEY[0]     ; HEX2[2]     ; 7.763  ;        ;        ; 7.763  ;
+; KEY[0]     ; HEX2[3]     ; 7.773  ;        ;        ; 7.773  ;
+; KEY[0]     ; HEX2[4]     ; 7.624  ;        ;        ; 7.624  ;
+; KEY[0]     ; HEX2[5]     ; 7.624  ;        ;        ; 7.624  ;
+; KEY[0]     ; HEX2[6]     ;        ; 7.614  ; 7.614  ;        ;
+; KEY[0]     ; LEDG[2]     ; 5.592  ;        ;        ; 5.592  ;
+; SW[0]      ; LEDG[8]     ; 4.937  ; 5.810  ; 5.810  ; 4.937  ;
+; SW[0]      ; LEDR[6]     ;        ; 5.963  ; 5.963  ;        ;
+; SW[0]      ; LEDR[7]     ;        ; 6.120  ; 6.120  ;        ;
+; SW[0]      ; LEDR[8]     ;        ; 5.433  ; 5.433  ;        ;
+; SW[0]      ; LEDR[9]     ;        ; 5.444  ; 5.444  ;        ;
+; SW[1]      ; LEDG[8]     ; 4.784  ; 5.978  ; 5.978  ; 4.784  ;
+; SW[1]      ; LEDR[6]     ; 5.023  ; 5.792  ; 5.792  ; 5.023  ;
+; SW[1]      ; LEDR[7]     ;        ; 6.288  ; 6.288  ;        ;
+; SW[1]      ; LEDR[8]     ;        ; 5.251  ; 5.251  ;        ;
+; SW[1]      ; LEDR[9]     ;        ; 5.262  ; 5.262  ;        ;
+; SW[2]      ; LEDG[8]     ; 4.813  ; 5.656  ; 5.656  ; 4.813  ;
+; SW[2]      ; LEDR[6]     ;        ; 5.641  ; 5.641  ;        ;
+; SW[2]      ; LEDR[7]     ; 5.123  ; 5.966  ; 5.966  ; 5.123  ;
+; SW[2]      ; LEDR[8]     ;        ; 5.111  ; 5.111  ;        ;
+; SW[2]      ; LEDR[9]     ;        ; 5.122  ; 5.122  ;        ;
+; SW[3]      ; LEDG[8]     ; 3.932  ; 5.770  ; 5.770  ; 3.932  ;
+; SW[3]      ; LEDR[6]     ; 4.171  ; 5.963  ; 5.963  ; 4.171  ;
+; SW[3]      ; LEDR[7]     ; 4.015  ; 5.897  ; 5.897  ; 4.015  ;
+; SW[3]      ; LEDR[8]     ;        ; 5.433  ; 5.433  ;        ;
+; SW[3]      ; LEDR[9]     ;        ; 5.444  ; 5.444  ;        ;
+; SW[4]      ; LEDG[8]     ; 3.726  ; 5.351  ; 5.351  ; 3.726  ;
+; SW[4]      ; LEDR[6]     ;        ; 5.544  ; 5.544  ;        ;
+; SW[4]      ; LEDR[7]     ;        ; 5.478  ; 5.478  ;        ;
+; SW[4]      ; LEDR[8]     ; 3.389  ; 5.014  ; 5.014  ; 3.389  ;
+; SW[4]      ; LEDR[9]     ;        ; 5.025  ; 5.025  ;        ;
+; SW[5]      ; LEDG[8]     ; 4.241  ; 5.829  ; 5.829  ; 4.241  ;
+; SW[5]      ; LEDR[6]     ; 4.480  ; 6.022  ; 6.022  ; 4.480  ;
+; SW[5]      ; LEDR[7]     ;        ; 5.956  ; 5.956  ;        ;
+; SW[5]      ; LEDR[8]     ; 4.006  ; 5.492  ; 5.492  ; 4.006  ;
+; SW[5]      ; LEDR[9]     ;        ; 5.503  ; 5.503  ;        ;
+; SW[6]      ; LEDG[8]     ; 4.767  ; 5.715  ; 5.715  ; 4.767  ;
+; SW[6]      ; LEDR[6]     ;        ; 5.908  ; 5.908  ;        ;
+; SW[6]      ; LEDR[7]     ; 5.077  ; 5.842  ; 5.842  ; 5.077  ;
+; SW[6]      ; LEDR[8]     ; 4.008  ; 5.378  ; 5.378  ; 4.008  ;
+; SW[6]      ; LEDR[9]     ;        ; 5.389  ; 5.389  ;        ;
+; SW[7]      ; LEDG[8]     ; 5.275  ; 5.756  ; 5.756  ; 5.275  ;
+; SW[7]      ; LEDR[6]     ; 5.514  ; 5.949  ; 5.949  ; 5.514  ;
+; SW[7]      ; LEDR[7]     ; 5.358  ; 5.973  ; 5.973  ; 5.358  ;
+; SW[7]      ; LEDR[8]     ; 4.445  ; 5.419  ; 5.419  ; 4.445  ;
+; SW[7]      ; LEDR[9]     ;        ; 5.430  ; 5.430  ;        ;
+; SW[8]      ; LEDG[8]     ; 4.651  ; 6.049  ; 6.049  ; 4.651  ;
+; SW[8]      ; LEDR[6]     ;        ; 5.863  ; 5.863  ;        ;
+; SW[8]      ; LEDR[7]     ;        ; 6.359  ; 6.359  ;        ;
+; SW[8]      ; LEDR[8]     ;        ; 5.290  ; 5.290  ;        ;
+; SW[8]      ; LEDR[9]     ; 4.324  ; 5.203  ; 5.203  ; 4.324  ;
+; SW[9]      ; LEDG[8]     ; 5.119  ; 6.414  ; 6.414  ; 5.119  ;
+; SW[9]      ; LEDR[6]     ; 5.358  ; 6.228  ; 6.228  ; 5.358  ;
+; SW[9]      ; LEDR[7]     ;        ; 6.724  ; 6.724  ;        ;
+; SW[9]      ; LEDR[8]     ;        ; 5.655  ; 5.655  ;        ;
+; SW[9]      ; LEDR[9]     ; 4.839  ; 5.035  ; 5.035  ; 4.839  ;
+; SW[10]     ; LEDG[8]     ; 5.107  ; 6.238  ; 6.238  ; 5.107  ;
+; SW[10]     ; LEDR[6]     ;        ; 6.052  ; 6.052  ;        ;
+; SW[10]     ; LEDR[7]     ; 5.417  ; 6.548  ; 6.548  ; 5.417  ;
+; SW[10]     ; LEDR[8]     ;        ; 5.479  ; 5.479  ;        ;
+; SW[10]     ; LEDR[9]     ; 4.664  ; 4.967  ; 4.967  ; 4.664  ;
+; SW[11]     ; LEDG[8]     ; 5.069  ; 6.716  ; 6.716  ; 5.069  ;
+; SW[11]     ; LEDR[6]     ; 5.308  ; 6.530  ; 6.530  ; 5.308  ;
+; SW[11]     ; LEDR[7]     ; 5.131  ; 7.026  ; 7.026  ; 5.131  ;
+; SW[11]     ; LEDR[8]     ;        ; 5.957  ; 5.957  ;        ;
+; SW[11]     ; LEDR[9]     ; 4.789  ; 5.167  ; 5.167  ; 4.789  ;
+; SW[12]     ; LEDG[8]     ; 4.961  ; 6.434  ; 6.434  ; 4.961  ;
+; SW[12]     ; LEDR[6]     ;        ; 6.248  ; 6.248  ;        ;
+; SW[12]     ; LEDR[7]     ;        ; 6.744  ; 6.744  ;        ;
+; SW[12]     ; LEDR[8]     ; 4.624  ; 5.675  ; 5.675  ; 4.624  ;
+; SW[12]     ; LEDR[9]     ; 4.272  ; 4.912  ; 4.912  ; 4.272  ;
+; SW[13]     ; LEDG[8]     ; 7.223  ; 8.835  ; 8.835  ; 7.223  ;
+; SW[13]     ; LEDR[6]     ; 7.462  ; 8.649  ; 8.649  ; 7.462  ;
+; SW[13]     ; LEDR[7]     ;        ; 9.145  ; 9.145  ;        ;
+; SW[13]     ; LEDR[8]     ; 6.937  ; 8.076  ; 8.076  ; 6.937  ;
+; SW[13]     ; LEDR[9]     ; 6.943  ; 7.286  ; 7.286  ; 6.943  ;
+; SW[14]     ; LEDG[8]     ; 7.194  ; 9.002  ; 9.002  ; 7.194  ;
+; SW[14]     ; LEDR[6]     ;        ; 8.816  ; 8.816  ;        ;
+; SW[14]     ; LEDR[7]     ; 7.504  ; 9.312  ; 9.312  ; 7.504  ;
+; SW[14]     ; LEDR[8]     ; 6.635  ; 8.243  ; 8.243  ; 6.635  ;
+; SW[14]     ; LEDR[9]     ; 6.751  ; 7.453  ; 7.453  ; 6.751  ;
+; SW[15]     ; LEDG[8]     ; 7.430  ; 8.661  ; 8.661  ; 7.430  ;
+; SW[15]     ; LEDR[6]     ; 7.669  ; 8.475  ; 8.475  ; 7.669  ;
+; SW[15]     ; LEDR[7]     ; 7.489  ; 8.971  ; 8.971  ; 7.489  ;
+; SW[15]     ; LEDR[8]     ; 7.138  ; 7.902  ; 7.902  ; 7.138  ;
+; SW[15]     ; LEDR[9]     ; 7.150  ; 7.245  ; 7.245  ; 7.150  ;
++------------+-------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; KEY[0]     ; HEX0[0]     ; 7.716 ; 7.716 ; 7.716 ; 7.716 ;
+; KEY[0]     ; HEX0[1]     ; 7.677 ; 7.677 ; 7.677 ; 7.677 ;
+; KEY[0]     ; HEX0[2]     ; 8.049 ; 7.683 ; 7.683 ; 8.049 ;
+; KEY[0]     ; HEX0[3]     ; 7.607 ; 7.607 ; 7.607 ; 7.607 ;
+; KEY[0]     ; HEX0[4]     ; 7.591 ; 7.957 ; 7.957 ; 7.591 ;
+; KEY[0]     ; HEX0[5]     ; 7.598 ; 7.964 ; 7.964 ; 7.598 ;
+; KEY[0]     ; HEX0[6]     ; 7.593 ; 7.593 ; 7.593 ; 7.593 ;
+; KEY[0]     ; HEX1[0]     ; 9.178 ; 9.178 ; 9.178 ; 9.178 ;
+; KEY[0]     ; HEX1[1]     ; 9.152 ; 9.152 ; 9.152 ; 9.152 ;
+; KEY[0]     ; HEX1[2]     ; 9.141 ; 9.141 ; 9.141 ; 9.141 ;
+; KEY[0]     ; HEX1[3]     ; 9.177 ; 9.177 ; 9.177 ; 9.177 ;
+; KEY[0]     ; HEX1[4]     ; 9.033 ; 9.033 ; 9.033 ; 9.033 ;
+; KEY[0]     ; HEX1[5]     ; 9.158 ; 9.158 ; 9.158 ; 9.158 ;
+; KEY[0]     ; HEX1[6]     ; 9.182 ; 9.182 ; 9.182 ; 9.182 ;
+; KEY[0]     ; HEX2[0]     ; 7.740 ;       ;       ; 7.740 ;
+; KEY[0]     ; HEX2[1]     ; 7.723 ;       ;       ; 7.723 ;
+; KEY[0]     ; HEX2[2]     ; 7.763 ;       ;       ; 7.763 ;
+; KEY[0]     ; HEX2[3]     ; 7.773 ;       ;       ; 7.773 ;
+; KEY[0]     ; HEX2[4]     ; 7.624 ;       ;       ; 7.624 ;
+; KEY[0]     ; HEX2[5]     ; 7.624 ;       ;       ; 7.624 ;
+; KEY[0]     ; HEX2[6]     ;       ; 7.614 ; 7.614 ;       ;
+; KEY[0]     ; LEDG[2]     ; 5.592 ;       ;       ; 5.592 ;
+; SW[0]      ; LEDG[8]     ; 4.937 ; 4.964 ; 4.964 ; 4.937 ;
+; SW[0]      ; LEDR[6]     ;       ; 5.203 ; 5.203 ;       ;
+; SW[0]      ; LEDR[7]     ;       ; 5.227 ; 5.227 ;       ;
+; SW[0]      ; LEDR[8]     ;       ; 4.314 ; 4.314 ;       ;
+; SW[0]      ; LEDR[9]     ;       ; 4.720 ; 4.720 ;       ;
+; SW[1]      ; LEDG[8]     ; 4.784 ; 4.865 ; 4.865 ; 4.784 ;
+; SW[1]      ; LEDR[6]     ; 5.023 ; 5.424 ; 5.424 ; 5.023 ;
+; SW[1]      ; LEDR[7]     ;       ; 5.190 ; 5.190 ;       ;
+; SW[1]      ; LEDR[8]     ;       ; 4.483 ; 4.483 ;       ;
+; SW[1]      ; LEDR[9]     ;       ; 4.538 ; 4.538 ;       ;
+; SW[2]      ; LEDG[8]     ; 4.813 ; 4.641 ; 4.641 ; 4.813 ;
+; SW[2]      ; LEDR[6]     ;       ; 4.880 ; 4.880 ;       ;
+; SW[2]      ; LEDR[7]     ; 5.123 ; 5.074 ; 5.074 ; 5.123 ;
+; SW[2]      ; LEDR[8]     ;       ; 4.161 ; 4.161 ;       ;
+; SW[2]      ; LEDR[9]     ;       ; 4.399 ; 4.399 ;       ;
+; SW[3]      ; LEDG[8]     ; 3.932 ; 4.089 ; 4.089 ; 3.932 ;
+; SW[3]      ; LEDR[6]     ; 4.171 ; 4.419 ; 4.419 ; 4.171 ;
+; SW[3]      ; LEDR[7]     ; 4.015 ; 5.120 ; 5.120 ; 4.015 ;
+; SW[3]      ; LEDR[8]     ;       ; 3.752 ; 3.752 ;       ;
+; SW[3]      ; LEDR[9]     ;       ; 4.720 ; 4.720 ;       ;
+; SW[4]      ; LEDG[8]     ; 3.726 ; 3.924 ; 3.924 ; 3.726 ;
+; SW[4]      ; LEDR[6]     ;       ; 4.163 ; 4.163 ;       ;
+; SW[4]      ; LEDR[7]     ;       ; 4.230 ; 4.230 ;       ;
+; SW[4]      ; LEDR[8]     ; 3.389 ; 3.689 ; 3.689 ; 3.389 ;
+; SW[4]      ; LEDR[9]     ;       ; 4.301 ; 4.301 ;       ;
+; SW[5]      ; LEDG[8]     ; 4.241 ; 4.148 ; 4.148 ; 4.241 ;
+; SW[5]      ; LEDR[6]     ; 4.480 ; 4.395 ; 4.395 ; 4.480 ;
+; SW[5]      ; LEDR[7]     ;       ; 4.239 ; 4.239 ;       ;
+; SW[5]      ; LEDR[8]     ; 4.006 ; 3.811 ; 3.811 ; 4.006 ;
+; SW[5]      ; LEDR[9]     ;       ; 4.779 ; 4.779 ;       ;
+; SW[6]      ; LEDG[8]     ; 4.767 ; 3.826 ; 3.826 ; 4.767 ;
+; SW[6]      ; LEDR[6]     ;       ; 4.065 ; 4.065 ;       ;
+; SW[6]      ; LEDR[7]     ; 5.077 ; 4.128 ; 4.128 ; 5.077 ;
+; SW[6]      ; LEDR[8]     ; 4.008 ; 3.591 ; 3.591 ; 4.008 ;
+; SW[6]      ; LEDR[9]     ;       ; 4.665 ; 4.665 ;       ;
+; SW[7]      ; LEDG[8]     ; 5.275 ; 4.911 ; 4.911 ; 5.275 ;
+; SW[7]      ; LEDR[6]     ; 5.514 ; 5.189 ; 5.189 ; 5.514 ;
+; SW[7]      ; LEDR[7]     ; 5.358 ; 5.321 ; 5.321 ; 5.358 ;
+; SW[7]      ; LEDR[8]     ; 4.445 ; 4.576 ; 4.576 ; 4.445 ;
+; SW[7]      ; LEDR[9]     ;       ; 4.706 ; 4.706 ;       ;
+; SW[8]      ; LEDG[8]     ; 4.651 ; 4.951 ; 4.951 ; 4.651 ;
+; SW[8]      ; LEDR[6]     ;       ; 5.207 ; 5.207 ;       ;
+; SW[8]      ; LEDR[7]     ;       ; 5.253 ; 5.253 ;       ;
+; SW[8]      ; LEDR[8]     ;       ; 4.554 ; 4.554 ;       ;
+; SW[8]      ; LEDR[9]     ; 4.324 ; 4.840 ; 4.840 ; 4.324 ;
+; SW[9]      ; LEDG[8]     ; 5.119 ; 4.995 ; 4.995 ; 5.119 ;
+; SW[9]      ; LEDR[6]     ; 5.358 ; 5.265 ; 5.265 ; 5.358 ;
+; SW[9]      ; LEDR[7]     ;       ; 5.085 ; 5.085 ;       ;
+; SW[9]      ; LEDR[8]     ;       ; 4.624 ; 4.624 ;       ;
+; SW[9]      ; LEDR[9]     ; 4.839 ; 4.668 ; 4.668 ; 4.839 ;
+; SW[10]     ; LEDG[8]     ; 5.107 ; 4.818 ; 4.818 ; 5.107 ;
+; SW[10]     ; LEDR[6]     ;       ; 5.194 ; 5.194 ;       ;
+; SW[10]     ; LEDR[7]     ; 5.417 ; 5.014 ; 5.014 ; 5.417 ;
+; SW[10]     ; LEDR[8]     ;       ; 4.556 ; 4.556 ;       ;
+; SW[10]     ; LEDR[9]     ; 4.664 ; 4.491 ; 4.491 ; 4.664 ;
+; SW[11]     ; LEDG[8]     ; 5.069 ; 4.903 ; 4.903 ; 5.069 ;
+; SW[11]     ; LEDR[6]     ; 5.308 ; 5.340 ; 5.340 ; 5.308 ;
+; SW[11]     ; LEDR[7]     ; 5.131 ; 5.213 ; 5.213 ; 5.131 ;
+; SW[11]     ; LEDR[8]     ;       ; 4.344 ; 4.344 ;       ;
+; SW[11]     ; LEDR[9]     ; 4.789 ; 4.402 ; 4.402 ; 4.789 ;
+; SW[12]     ; LEDG[8]     ; 4.961 ; 4.756 ; 4.756 ; 4.961 ;
+; SW[12]     ; LEDR[6]     ;       ; 5.059 ; 5.059 ;       ;
+; SW[12]     ; LEDR[7]     ;       ; 4.946 ; 4.946 ;       ;
+; SW[12]     ; LEDR[8]     ; 4.624 ; 4.199 ; 4.199 ; 4.624 ;
+; SW[12]     ; LEDR[9]     ; 4.272 ; 4.313 ; 4.313 ; 4.272 ;
+; SW[13]     ; LEDG[8]     ; 7.223 ; 7.028 ; 7.028 ; 7.223 ;
+; SW[13]     ; LEDR[6]     ; 7.462 ; 7.407 ; 7.407 ; 7.462 ;
+; SW[13]     ; LEDR[7]     ;       ; 7.230 ; 7.230 ;       ;
+; SW[13]     ; LEDR[8]     ; 6.937 ; 6.469 ; 6.469 ; 6.937 ;
+; SW[13]     ; LEDR[9]     ; 6.943 ; 6.521 ; 6.521 ; 6.943 ;
+; SW[14]     ; LEDG[8]     ; 7.194 ; 7.087 ; 7.087 ; 7.194 ;
+; SW[14]     ; LEDR[6]     ;       ; 7.326 ; 7.326 ;       ;
+; SW[14]     ; LEDR[7]     ; 7.504 ; 7.218 ; 7.218 ; 7.504 ;
+; SW[14]     ; LEDR[8]     ; 6.635 ; 6.801 ; 6.801 ; 6.635 ;
+; SW[14]     ; LEDR[9]     ; 6.751 ; 6.688 ; 6.688 ; 6.751 ;
+; SW[15]     ; LEDG[8]     ; 7.430 ; 7.242 ; 7.242 ; 7.430 ;
+; SW[15]     ; LEDR[6]     ; 7.669 ; 7.560 ; 7.560 ; 7.669 ;
+; SW[15]     ; LEDR[7]     ; 7.489 ; 7.587 ; 7.587 ; 7.489 ;
+; SW[15]     ; LEDR[8]     ; 7.138 ; 6.834 ; 6.834 ; 7.138 ;
+; SW[15]     ; LEDR[9]     ; 7.150 ; 6.882 ; 6.882 ; 7.150 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++---------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                             ;
++--------------------+--------+--------+----------+---------+---------------------+
+; Clock              ; Setup  ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++--------------------+--------+--------+----------+---------+---------------------+
+; Worst-case Slack   ; -0.185 ; -3.303 ; N/A      ; N/A     ; -1.380              ;
+;  CLOCK_50          ; -0.185 ; -3.303 ; N/A      ; N/A     ; -1.380              ;
+;  maquina:inst|inst ; N/A    ; N/A    ; N/A      ; N/A     ; 0.500               ;
+; Design-wide TNS    ; -0.185 ; -6.432 ; 0.0      ; 0.0     ; -3.38               ;
+;  CLOCK_50          ; -0.185 ; -6.432 ; N/A      ; N/A     ; -3.380              ;
+;  maquina:inst|inst ; N/A    ; N/A    ; N/A      ; N/A     ; 0.000               ;
++--------------------+--------+--------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------------+
+; Setup Times                                                                      ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; Data Port ; Clock Port        ; Rise   ; Fall   ; Clock Edge ; Clock Reference   ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; SW[*]     ; CLOCK_50          ; 11.980 ; 11.980 ; Rise       ; CLOCK_50          ;
+;  SW[0]    ; CLOCK_50          ; 6.301  ; 6.301  ; Rise       ; CLOCK_50          ;
+;  SW[1]    ; CLOCK_50          ; 6.693  ; 6.693  ; Rise       ; CLOCK_50          ;
+;  SW[2]    ; CLOCK_50          ; 5.930  ; 5.930  ; Rise       ; CLOCK_50          ;
+;  SW[3]    ; CLOCK_50          ; 6.481  ; 6.481  ; Rise       ; CLOCK_50          ;
+;  SW[4]    ; CLOCK_50          ; 5.548  ; 5.548  ; Rise       ; CLOCK_50          ;
+;  SW[5]    ; CLOCK_50          ; 6.567  ; 6.567  ; Rise       ; CLOCK_50          ;
+;  SW[6]    ; CLOCK_50          ; 6.328  ; 6.328  ; Rise       ; CLOCK_50          ;
+;  SW[7]    ; CLOCK_50          ; 6.189  ; 6.189  ; Rise       ; CLOCK_50          ;
+;  SW[8]    ; CLOCK_50          ; 6.675  ; 6.675  ; Rise       ; CLOCK_50          ;
+;  SW[9]    ; CLOCK_50          ; 7.573  ; 7.573  ; Rise       ; CLOCK_50          ;
+;  SW[10]   ; CLOCK_50          ; 7.108  ; 7.108  ; Rise       ; CLOCK_50          ;
+;  SW[11]   ; CLOCK_50          ; 8.380  ; 8.380  ; Rise       ; CLOCK_50          ;
+;  SW[12]   ; CLOCK_50          ; 7.719  ; 7.719  ; Rise       ; CLOCK_50          ;
+;  SW[13]   ; CLOCK_50          ; 11.690 ; 11.690 ; Rise       ; CLOCK_50          ;
+;  SW[14]   ; CLOCK_50          ; 11.980 ; 11.980 ; Rise       ; CLOCK_50          ;
+;  SW[15]   ; CLOCK_50          ; 11.278 ; 11.278 ; Rise       ; CLOCK_50          ;
+; SW[*]     ; maquina:inst|inst ; 14.039 ; 14.039 ; Rise       ; maquina:inst|inst ;
+;  SW[0]    ; maquina:inst|inst ; 8.530  ; 8.530  ; Rise       ; maquina:inst|inst ;
+;  SW[1]    ; maquina:inst|inst ; 8.752  ; 8.752  ; Rise       ; maquina:inst|inst ;
+;  SW[2]    ; maquina:inst|inst ; 7.989  ; 7.989  ; Rise       ; maquina:inst|inst ;
+;  SW[3]    ; maquina:inst|inst ; 8.710  ; 8.710  ; Rise       ; maquina:inst|inst ;
+;  SW[4]    ; maquina:inst|inst ; 7.777  ; 7.777  ; Rise       ; maquina:inst|inst ;
+;  SW[5]    ; maquina:inst|inst ; 8.796  ; 8.796  ; Rise       ; maquina:inst|inst ;
+;  SW[6]    ; maquina:inst|inst ; 8.557  ; 8.557  ; Rise       ; maquina:inst|inst ;
+;  SW[7]    ; maquina:inst|inst ; 8.418  ; 8.418  ; Rise       ; maquina:inst|inst ;
+;  SW[8]    ; maquina:inst|inst ; 8.734  ; 8.734  ; Rise       ; maquina:inst|inst ;
+;  SW[9]    ; maquina:inst|inst ; 9.632  ; 9.632  ; Rise       ; maquina:inst|inst ;
+;  SW[10]   ; maquina:inst|inst ; 9.167  ; 9.167  ; Rise       ; maquina:inst|inst ;
+;  SW[11]   ; maquina:inst|inst ; 10.439 ; 10.439 ; Rise       ; maquina:inst|inst ;
+;  SW[12]   ; maquina:inst|inst ; 9.778  ; 9.778  ; Rise       ; maquina:inst|inst ;
+;  SW[13]   ; maquina:inst|inst ; 13.749 ; 13.749 ; Rise       ; maquina:inst|inst ;
+;  SW[14]   ; maquina:inst|inst ; 14.039 ; 14.039 ; Rise       ; maquina:inst|inst ;
+;  SW[15]   ; maquina:inst|inst ; 13.337 ; 13.337 ; Rise       ; maquina:inst|inst ;
+; SW[*]     ; maquina:inst|inst ; 14.918 ; 14.918 ; Fall       ; maquina:inst|inst ;
+;  SW[0]    ; maquina:inst|inst ; 9.272  ; 9.272  ; Fall       ; maquina:inst|inst ;
+;  SW[1]    ; maquina:inst|inst ; 9.631  ; 9.631  ; Fall       ; maquina:inst|inst ;
+;  SW[2]    ; maquina:inst|inst ; 8.868  ; 8.868  ; Fall       ; maquina:inst|inst ;
+;  SW[3]    ; maquina:inst|inst ; 9.452  ; 9.452  ; Fall       ; maquina:inst|inst ;
+;  SW[4]    ; maquina:inst|inst ; 8.519  ; 8.519  ; Fall       ; maquina:inst|inst ;
+;  SW[5]    ; maquina:inst|inst ; 9.538  ; 9.538  ; Fall       ; maquina:inst|inst ;
+;  SW[6]    ; maquina:inst|inst ; 9.299  ; 9.299  ; Fall       ; maquina:inst|inst ;
+;  SW[7]    ; maquina:inst|inst ; 9.160  ; 9.160  ; Fall       ; maquina:inst|inst ;
+;  SW[8]    ; maquina:inst|inst ; 9.613  ; 9.613  ; Fall       ; maquina:inst|inst ;
+;  SW[9]    ; maquina:inst|inst ; 10.511 ; 10.511 ; Fall       ; maquina:inst|inst ;
+;  SW[10]   ; maquina:inst|inst ; 10.046 ; 10.046 ; Fall       ; maquina:inst|inst ;
+;  SW[11]   ; maquina:inst|inst ; 11.318 ; 11.318 ; Fall       ; maquina:inst|inst ;
+;  SW[12]   ; maquina:inst|inst ; 10.657 ; 10.657 ; Fall       ; maquina:inst|inst ;
+;  SW[13]   ; maquina:inst|inst ; 14.628 ; 14.628 ; Fall       ; maquina:inst|inst ;
+;  SW[14]   ; maquina:inst|inst ; 14.918 ; 14.918 ; Fall       ; maquina:inst|inst ;
+;  SW[15]   ; maquina:inst|inst ; 14.216 ; 14.216 ; Fall       ; maquina:inst|inst ;
++-----------+-------------------+--------+--------+------------+-------------------+
+
+
++----------------------------------------------------------------------------------+
+; Hold Times                                                                       ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; Data Port ; Clock Port        ; Rise   ; Fall   ; Clock Edge ; Clock Reference   ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; SW[*]     ; CLOCK_50          ; -0.166 ; -0.166 ; Rise       ; CLOCK_50          ;
+;  SW[0]    ; CLOCK_50          ; -1.181 ; -1.181 ; Rise       ; CLOCK_50          ;
+;  SW[1]    ; CLOCK_50          ; -1.124 ; -1.124 ; Rise       ; CLOCK_50          ;
+;  SW[2]    ; CLOCK_50          ; -0.981 ; -0.981 ; Rise       ; CLOCK_50          ;
+;  SW[3]    ; CLOCK_50          ; -0.178 ; -0.178 ; Rise       ; CLOCK_50          ;
+;  SW[4]    ; CLOCK_50          ; -0.256 ; -0.256 ; Rise       ; CLOCK_50          ;
+;  SW[5]    ; CLOCK_50          ; -0.402 ; -0.402 ; Rise       ; CLOCK_50          ;
+;  SW[6]    ; CLOCK_50          ; -0.166 ; -0.166 ; Rise       ; CLOCK_50          ;
+;  SW[7]    ; CLOCK_50          ; -1.290 ; -1.290 ; Rise       ; CLOCK_50          ;
+;  SW[8]    ; CLOCK_50          ; -1.189 ; -1.189 ; Rise       ; CLOCK_50          ;
+;  SW[9]    ; CLOCK_50          ; -1.248 ; -1.248 ; Rise       ; CLOCK_50          ;
+;  SW[10]   ; CLOCK_50          ; -1.177 ; -1.177 ; Rise       ; CLOCK_50          ;
+;  SW[11]   ; CLOCK_50          ; -1.211 ; -1.211 ; Rise       ; CLOCK_50          ;
+;  SW[12]   ; CLOCK_50          ; -1.066 ; -1.066 ; Rise       ; CLOCK_50          ;
+;  SW[13]   ; CLOCK_50          ; -3.336 ; -3.336 ; Rise       ; CLOCK_50          ;
+;  SW[14]   ; CLOCK_50          ; -3.381 ; -3.381 ; Rise       ; CLOCK_50          ;
+;  SW[15]   ; CLOCK_50          ; -3.652 ; -3.652 ; Rise       ; CLOCK_50          ;
+; SW[*]     ; maquina:inst|inst ; -0.667 ; -0.667 ; Rise       ; maquina:inst|inst ;
+;  SW[0]    ; maquina:inst|inst ; -1.805 ; -1.805 ; Rise       ; maquina:inst|inst ;
+;  SW[1]    ; maquina:inst|inst ; -1.625 ; -1.625 ; Rise       ; maquina:inst|inst ;
+;  SW[2]    ; maquina:inst|inst ; -1.482 ; -1.482 ; Rise       ; maquina:inst|inst ;
+;  SW[3]    ; maquina:inst|inst ; -0.773 ; -0.773 ; Rise       ; maquina:inst|inst ;
+;  SW[4]    ; maquina:inst|inst ; -0.765 ; -0.765 ; Rise       ; maquina:inst|inst ;
+;  SW[5]    ; maquina:inst|inst ; -0.997 ; -0.997 ; Rise       ; maquina:inst|inst ;
+;  SW[6]    ; maquina:inst|inst ; -0.667 ; -0.667 ; Rise       ; maquina:inst|inst ;
+;  SW[7]    ; maquina:inst|inst ; -1.791 ; -1.791 ; Rise       ; maquina:inst|inst ;
+;  SW[8]    ; maquina:inst|inst ; -1.681 ; -1.681 ; Rise       ; maquina:inst|inst ;
+;  SW[9]    ; maquina:inst|inst ; -1.867 ; -1.867 ; Rise       ; maquina:inst|inst ;
+;  SW[10]   ; maquina:inst|inst ; -1.796 ; -1.796 ; Rise       ; maquina:inst|inst ;
+;  SW[11]   ; maquina:inst|inst ; -1.759 ; -1.759 ; Rise       ; maquina:inst|inst ;
+;  SW[12]   ; maquina:inst|inst ; -1.629 ; -1.629 ; Rise       ; maquina:inst|inst ;
+;  SW[13]   ; maquina:inst|inst ; -3.878 ; -3.878 ; Rise       ; maquina:inst|inst ;
+;  SW[14]   ; maquina:inst|inst ; -3.928 ; -3.928 ; Rise       ; maquina:inst|inst ;
+;  SW[15]   ; maquina:inst|inst ; -4.162 ; -4.162 ; Rise       ; maquina:inst|inst ;
+; SW[*]     ; maquina:inst|inst ; -0.407 ; -0.407 ; Fall       ; maquina:inst|inst ;
+;  SW[0]    ; maquina:inst|inst ; -1.332 ; -1.332 ; Fall       ; maquina:inst|inst ;
+;  SW[1]    ; maquina:inst|inst ; -1.501 ; -1.501 ; Fall       ; maquina:inst|inst ;
+;  SW[2]    ; maquina:inst|inst ; -1.179 ; -1.179 ; Fall       ; maquina:inst|inst ;
+;  SW[3]    ; maquina:inst|inst ; -0.459 ; -0.459 ; Fall       ; maquina:inst|inst ;
+;  SW[4]    ; maquina:inst|inst ; -0.407 ; -0.407 ; Fall       ; maquina:inst|inst ;
+;  SW[5]    ; maquina:inst|inst ; -0.683 ; -0.683 ; Fall       ; maquina:inst|inst ;
+;  SW[6]    ; maquina:inst|inst ; -0.572 ; -0.572 ; Fall       ; maquina:inst|inst ;
+;  SW[7]    ; maquina:inst|inst ; -1.463 ; -1.463 ; Fall       ; maquina:inst|inst ;
+;  SW[8]    ; maquina:inst|inst ; -1.450 ; -1.450 ; Fall       ; maquina:inst|inst ;
+;  SW[9]    ; maquina:inst|inst ; -1.529 ; -1.529 ; Fall       ; maquina:inst|inst ;
+;  SW[10]   ; maquina:inst|inst ; -1.458 ; -1.458 ; Fall       ; maquina:inst|inst ;
+;  SW[11]   ; maquina:inst|inst ; -1.362 ; -1.362 ; Fall       ; maquina:inst|inst ;
+;  SW[12]   ; maquina:inst|inst ; -1.217 ; -1.217 ; Fall       ; maquina:inst|inst ;
+;  SW[13]   ; maquina:inst|inst ; -3.487 ; -3.487 ; Fall       ; maquina:inst|inst ;
+;  SW[14]   ; maquina:inst|inst ; -3.653 ; -3.653 ; Fall       ; maquina:inst|inst ;
+;  SW[15]   ; maquina:inst|inst ; -3.852 ; -3.852 ; Fall       ; maquina:inst|inst ;
++-----------+-------------------+--------+--------+------------+-------------------+
+
+
++----------------------------------------------------------------------------------+
+; Clock to Output Times                                                            ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; Data Port ; Clock Port        ; Rise   ; Fall   ; Clock Edge ; Clock Reference   ;
++-----------+-------------------+--------+--------+------------+-------------------+
+; LEDR[*]   ; CLOCK_50          ; 9.071  ; 9.071  ; Rise       ; CLOCK_50          ;
+;  LEDR[1]  ; CLOCK_50          ; 9.071  ; 9.071  ; Rise       ; CLOCK_50          ;
+; HEX0[*]   ; maquina:inst|inst ; 27.644 ; 27.644 ; Rise       ; maquina:inst|inst ;
+;  HEX0[0]  ; maquina:inst|inst ; 27.644 ; 27.644 ; Rise       ; maquina:inst|inst ;
+;  HEX0[1]  ; maquina:inst|inst ; 27.597 ; 27.597 ; Rise       ; maquina:inst|inst ;
+;  HEX0[2]  ; maquina:inst|inst ; 27.575 ; 27.575 ; Rise       ; maquina:inst|inst ;
+;  HEX0[3]  ; maquina:inst|inst ; 27.405 ; 27.405 ; Rise       ; maquina:inst|inst ;
+;  HEX0[4]  ; maquina:inst|inst ; 27.382 ; 27.382 ; Rise       ; maquina:inst|inst ;
+;  HEX0[5]  ; maquina:inst|inst ; 27.360 ; 27.360 ; Rise       ; maquina:inst|inst ;
+;  HEX0[6]  ; maquina:inst|inst ; 27.394 ; 27.394 ; Rise       ; maquina:inst|inst ;
+; HEX1[*]   ; maquina:inst|inst ; 45.367 ; 45.367 ; Rise       ; maquina:inst|inst ;
+;  HEX1[0]  ; maquina:inst|inst ; 45.239 ; 45.239 ; Rise       ; maquina:inst|inst ;
+;  HEX1[1]  ; maquina:inst|inst ; 45.202 ; 45.202 ; Rise       ; maquina:inst|inst ;
+;  HEX1[2]  ; maquina:inst|inst ; 45.317 ; 45.317 ; Rise       ; maquina:inst|inst ;
+;  HEX1[3]  ; maquina:inst|inst ; 45.366 ; 45.366 ; Rise       ; maquina:inst|inst ;
+;  HEX1[4]  ; maquina:inst|inst ; 45.059 ; 45.059 ; Rise       ; maquina:inst|inst ;
+;  HEX1[5]  ; maquina:inst|inst ; 45.342 ; 45.342 ; Rise       ; maquina:inst|inst ;
+;  HEX1[6]  ; maquina:inst|inst ; 45.367 ; 45.367 ; Rise       ; maquina:inst|inst ;
+; HEX2[*]   ; maquina:inst|inst ; 13.715 ; 13.715 ; Rise       ; maquina:inst|inst ;
+;  HEX2[0]  ; maquina:inst|inst ; 13.673 ; 13.673 ; Rise       ; maquina:inst|inst ;
+;  HEX2[1]  ; maquina:inst|inst ; 13.665 ; 13.665 ; Rise       ; maquina:inst|inst ;
+;  HEX2[2]  ; maquina:inst|inst ; 13.705 ; 13.705 ; Rise       ; maquina:inst|inst ;
+;  HEX2[3]  ; maquina:inst|inst ; 13.715 ; 13.715 ; Rise       ; maquina:inst|inst ;
+;  HEX2[4]  ; maquina:inst|inst ; 13.409 ; 13.409 ; Rise       ; maquina:inst|inst ;
+;  HEX2[5]  ; maquina:inst|inst ; 13.409 ; 13.409 ; Rise       ; maquina:inst|inst ;
+;  HEX2[6]  ; maquina:inst|inst ; 13.399 ; 13.399 ; Rise       ; maquina:inst|inst ;
+; HEX4[*]   ; maquina:inst|inst ; 10.064 ; 10.064 ; Rise       ; maquina:inst|inst ;
+;  HEX4[0]  ; maquina:inst|inst ; 9.754  ; 9.754  ; Rise       ; maquina:inst|inst ;
+;  HEX4[1]  ; maquina:inst|inst ; 9.767  ; 9.767  ; Rise       ; maquina:inst|inst ;
+;  HEX4[2]  ; maquina:inst|inst ; 9.770  ; 9.770  ; Rise       ; maquina:inst|inst ;
+;  HEX4[3]  ; maquina:inst|inst ; 10.037 ; 10.037 ; Rise       ; maquina:inst|inst ;
+;  HEX4[4]  ; maquina:inst|inst ; 9.765  ; 9.765  ; Rise       ; maquina:inst|inst ;
+;  HEX4[5]  ; maquina:inst|inst ; 10.061 ; 10.061 ; Rise       ; maquina:inst|inst ;
+;  HEX4[6]  ; maquina:inst|inst ; 10.064 ; 10.064 ; Rise       ; maquina:inst|inst ;
+; HEX6[*]   ; maquina:inst|inst ; 10.158 ; 10.158 ; Rise       ; maquina:inst|inst ;
+;  HEX6[0]  ; maquina:inst|inst ; 9.606  ; 9.606  ; Rise       ; maquina:inst|inst ;
+;  HEX6[1]  ; maquina:inst|inst ; 9.614  ; 9.614  ; Rise       ; maquina:inst|inst ;
+;  HEX6[2]  ; maquina:inst|inst ; 9.595  ; 9.595  ; Rise       ; maquina:inst|inst ;
+;  HEX6[3]  ; maquina:inst|inst ; 10.152 ; 10.152 ; Rise       ; maquina:inst|inst ;
+;  HEX6[4]  ; maquina:inst|inst ; 10.158 ; 10.158 ; Rise       ; maquina:inst|inst ;
+;  HEX6[5]  ; maquina:inst|inst ; 10.110 ; 10.110 ; Rise       ; maquina:inst|inst ;
+;  HEX6[6]  ; maquina:inst|inst ; 10.087 ; 10.087 ; Rise       ; maquina:inst|inst ;
+; LEDR[*]   ; maquina:inst|inst ; 7.040  ; 7.040  ; Rise       ; maquina:inst|inst ;
+;  LEDR[0]  ; maquina:inst|inst ; 5.330  ;        ; Rise       ; maquina:inst|inst ;
+;  LEDR[10] ; maquina:inst|inst ; 6.402  ; 6.402  ; Rise       ; maquina:inst|inst ;
+;  LEDR[11] ; maquina:inst|inst ; 7.040  ; 7.040  ; Rise       ; maquina:inst|inst ;
+;  LEDR[12] ; maquina:inst|inst ; 6.727  ; 6.727  ; Rise       ; maquina:inst|inst ;
+;  LEDR[13] ; maquina:inst|inst ; 6.153  ; 6.153  ; Rise       ; maquina:inst|inst ;
+;  LEDR[14] ; maquina:inst|inst ; 6.369  ; 6.369  ; Rise       ; maquina:inst|inst ;
+;  LEDR[15] ; maquina:inst|inst ; 6.378  ; 6.378  ; Rise       ; maquina:inst|inst ;
+;  LEDR[16] ; maquina:inst|inst ; 6.534  ; 6.534  ; Rise       ; maquina:inst|inst ;
+;  LEDR[17] ; maquina:inst|inst ; 6.412  ; 6.412  ; Rise       ; maquina:inst|inst ;
+; HEX0[*]   ; maquina:inst|inst ; 24.759 ; 24.759 ; Fall       ; maquina:inst|inst ;
+;  HEX0[0]  ; maquina:inst|inst ; 24.759 ; 24.759 ; Fall       ; maquina:inst|inst ;
+;  HEX0[1]  ; maquina:inst|inst ; 24.712 ; 24.712 ; Fall       ; maquina:inst|inst ;
+;  HEX0[2]  ; maquina:inst|inst ; 24.690 ; 24.690 ; Fall       ; maquina:inst|inst ;
+;  HEX0[3]  ; maquina:inst|inst ; 24.520 ; 24.520 ; Fall       ; maquina:inst|inst ;
+;  HEX0[4]  ; maquina:inst|inst ; 24.497 ; 24.497 ; Fall       ; maquina:inst|inst ;
+;  HEX0[5]  ; maquina:inst|inst ; 24.475 ; 24.475 ; Fall       ; maquina:inst|inst ;
+;  HEX0[6]  ; maquina:inst|inst ; 24.509 ; 24.509 ; Fall       ; maquina:inst|inst ;
+; HEX1[*]   ; maquina:inst|inst ; 42.482 ; 42.482 ; Fall       ; maquina:inst|inst ;
+;  HEX1[0]  ; maquina:inst|inst ; 42.354 ; 42.354 ; Fall       ; maquina:inst|inst ;
+;  HEX1[1]  ; maquina:inst|inst ; 42.317 ; 42.317 ; Fall       ; maquina:inst|inst ;
+;  HEX1[2]  ; maquina:inst|inst ; 42.432 ; 42.432 ; Fall       ; maquina:inst|inst ;
+;  HEX1[3]  ; maquina:inst|inst ; 42.481 ; 42.481 ; Fall       ; maquina:inst|inst ;
+;  HEX1[4]  ; maquina:inst|inst ; 42.174 ; 42.174 ; Fall       ; maquina:inst|inst ;
+;  HEX1[5]  ; maquina:inst|inst ; 42.457 ; 42.457 ; Fall       ; maquina:inst|inst ;
+;  HEX1[6]  ; maquina:inst|inst ; 42.482 ; 42.482 ; Fall       ; maquina:inst|inst ;
+; HEX2[*]   ; maquina:inst|inst ; 10.727 ; 10.727 ; Fall       ; maquina:inst|inst ;
+;  HEX2[0]  ; maquina:inst|inst ; 10.685 ; 10.685 ; Fall       ; maquina:inst|inst ;
+;  HEX2[1]  ; maquina:inst|inst ; 10.677 ; 10.677 ; Fall       ; maquina:inst|inst ;
+;  HEX2[2]  ; maquina:inst|inst ; 10.717 ; 10.717 ; Fall       ; maquina:inst|inst ;
+;  HEX2[3]  ; maquina:inst|inst ; 10.727 ; 10.727 ; Fall       ; maquina:inst|inst ;
+;  HEX2[4]  ; maquina:inst|inst ; 10.421 ; 10.421 ; Fall       ; maquina:inst|inst ;
+;  HEX2[5]  ; maquina:inst|inst ; 10.421 ; 10.421 ; Fall       ; maquina:inst|inst ;
+;  HEX2[6]  ; maquina:inst|inst ; 10.411 ; 10.411 ; Fall       ; maquina:inst|inst ;
+; LEDG[*]   ; maquina:inst|inst ; 8.573  ; 8.573  ; Fall       ; maquina:inst|inst ;
+;  LEDG[0]  ; maquina:inst|inst ; 8.573  ; 8.573  ; Fall       ; maquina:inst|inst ;
+;  LEDG[1]  ; maquina:inst|inst ; 7.723  ; 7.723  ; Fall       ; maquina:inst|inst ;
+; LEDR[*]   ; maquina:inst|inst ;        ; 5.330  ; Fall       ; maquina:inst|inst ;
+;  LEDR[0]  ; maquina:inst|inst ;        ; 5.330  ; Fall       ; maquina:inst|inst ;
++-----------+-------------------+--------+--------+------------+-------------------+
+
+
++--------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                  ;
++-----------+-------------------+-------+-------+------------+-------------------+
+; Data Port ; Clock Port        ; Rise  ; Fall  ; Clock Edge ; Clock Reference   ;
++-----------+-------------------+-------+-------+------------+-------------------+
+; LEDR[*]   ; CLOCK_50          ; 4.767 ; 4.767 ; Rise       ; CLOCK_50          ;
+;  LEDR[1]  ; CLOCK_50          ; 4.767 ; 4.767 ; Rise       ; CLOCK_50          ;
+; HEX0[*]   ; maquina:inst|inst ; 5.168 ; 5.168 ; Rise       ; maquina:inst|inst ;
+;  HEX0[0]  ; maquina:inst|inst ; 5.293 ; 5.293 ; Rise       ; maquina:inst|inst ;
+;  HEX0[1]  ; maquina:inst|inst ; 5.254 ; 5.254 ; Rise       ; maquina:inst|inst ;
+;  HEX0[2]  ; maquina:inst|inst ; 5.260 ; 5.260 ; Rise       ; maquina:inst|inst ;
+;  HEX0[3]  ; maquina:inst|inst ; 5.184 ; 5.184 ; Rise       ; maquina:inst|inst ;
+;  HEX0[4]  ; maquina:inst|inst ; 5.168 ; 5.168 ; Rise       ; maquina:inst|inst ;
+;  HEX0[5]  ; maquina:inst|inst ; 5.175 ; 5.175 ; Rise       ; maquina:inst|inst ;
+;  HEX0[6]  ; maquina:inst|inst ; 5.170 ; 5.170 ; Rise       ; maquina:inst|inst ;
+; HEX1[*]   ; maquina:inst|inst ; 6.502 ; 6.502 ; Rise       ; maquina:inst|inst ;
+;  HEX1[0]  ; maquina:inst|inst ; 6.630 ; 6.630 ; Rise       ; maquina:inst|inst ;
+;  HEX1[1]  ; maquina:inst|inst ; 6.607 ; 6.607 ; Rise       ; maquina:inst|inst ;
+;  HEX1[2]  ; maquina:inst|inst ; 6.604 ; 6.604 ; Rise       ; maquina:inst|inst ;
+;  HEX1[3]  ; maquina:inst|inst ; 6.632 ; 6.632 ; Rise       ; maquina:inst|inst ;
+;  HEX1[4]  ; maquina:inst|inst ; 6.502 ; 6.502 ; Rise       ; maquina:inst|inst ;
+;  HEX1[5]  ; maquina:inst|inst ; 6.626 ; 6.626 ; Rise       ; maquina:inst|inst ;
+;  HEX1[6]  ; maquina:inst|inst ; 6.647 ; 6.647 ; Rise       ; maquina:inst|inst ;
+; HEX2[*]   ; maquina:inst|inst ; 5.008 ; 5.008 ; Rise       ; maquina:inst|inst ;
+;  HEX2[0]  ; maquina:inst|inst ; 5.134 ; 5.134 ; Rise       ; maquina:inst|inst ;
+;  HEX2[1]  ; maquina:inst|inst ; 5.117 ; 5.117 ; Rise       ; maquina:inst|inst ;
+;  HEX2[2]  ; maquina:inst|inst ; 5.157 ; 5.157 ; Rise       ; maquina:inst|inst ;
+;  HEX2[3]  ; maquina:inst|inst ; 5.167 ; 5.167 ; Rise       ; maquina:inst|inst ;
+;  HEX2[4]  ; maquina:inst|inst ; 5.018 ; 5.018 ; Rise       ; maquina:inst|inst ;
+;  HEX2[5]  ; maquina:inst|inst ; 5.018 ; 5.018 ; Rise       ; maquina:inst|inst ;
+;  HEX2[6]  ; maquina:inst|inst ; 5.008 ; 5.008 ; Rise       ; maquina:inst|inst ;
+; HEX4[*]   ; maquina:inst|inst ; 4.811 ; 4.811 ; Rise       ; maquina:inst|inst ;
+;  HEX4[0]  ; maquina:inst|inst ; 4.811 ; 4.811 ; Rise       ; maquina:inst|inst ;
+;  HEX4[1]  ; maquina:inst|inst ; 4.817 ; 4.817 ; Rise       ; maquina:inst|inst ;
+;  HEX4[2]  ; maquina:inst|inst ; 4.817 ; 4.817 ; Rise       ; maquina:inst|inst ;
+;  HEX4[3]  ; maquina:inst|inst ; 4.924 ; 4.924 ; Rise       ; maquina:inst|inst ;
+;  HEX4[4]  ; maquina:inst|inst ; 4.817 ; 4.817 ; Rise       ; maquina:inst|inst ;
+;  HEX4[5]  ; maquina:inst|inst ; 4.954 ; 4.954 ; Rise       ; maquina:inst|inst ;
+;  HEX4[6]  ; maquina:inst|inst ; 4.952 ; 4.952 ; Rise       ; maquina:inst|inst ;
+; HEX6[*]   ; maquina:inst|inst ; 4.665 ; 4.665 ; Rise       ; maquina:inst|inst ;
+;  HEX6[0]  ; maquina:inst|inst ; 4.665 ; 4.665 ; Rise       ; maquina:inst|inst ;
+;  HEX6[1]  ; maquina:inst|inst ; 4.672 ; 4.672 ; Rise       ; maquina:inst|inst ;
+;  HEX6[2]  ; maquina:inst|inst ; 4.678 ; 4.678 ; Rise       ; maquina:inst|inst ;
+;  HEX6[3]  ; maquina:inst|inst ; 4.967 ; 4.967 ; Rise       ; maquina:inst|inst ;
+;  HEX6[4]  ; maquina:inst|inst ; 4.957 ; 4.957 ; Rise       ; maquina:inst|inst ;
+;  HEX6[5]  ; maquina:inst|inst ; 4.947 ; 4.947 ; Rise       ; maquina:inst|inst ;
+;  HEX6[6]  ; maquina:inst|inst ; 4.928 ; 4.928 ; Rise       ; maquina:inst|inst ;
+; LEDR[*]   ; maquina:inst|inst ; 2.719 ; 3.336 ; Rise       ; maquina:inst|inst ;
+;  LEDR[0]  ; maquina:inst|inst ; 2.719 ;       ; Rise       ; maquina:inst|inst ;
+;  LEDR[10] ; maquina:inst|inst ; 3.451 ; 3.451 ; Rise       ; maquina:inst|inst ;
+;  LEDR[11] ; maquina:inst|inst ; 3.758 ; 3.758 ; Rise       ; maquina:inst|inst ;
+;  LEDR[12] ; maquina:inst|inst ; 3.603 ; 3.603 ; Rise       ; maquina:inst|inst ;
+;  LEDR[13] ; maquina:inst|inst ; 3.336 ; 3.336 ; Rise       ; maquina:inst|inst ;
+;  LEDR[14] ; maquina:inst|inst ; 3.456 ; 3.456 ; Rise       ; maquina:inst|inst ;
+;  LEDR[15] ; maquina:inst|inst ; 3.461 ; 3.461 ; Rise       ; maquina:inst|inst ;
+;  LEDR[16] ; maquina:inst|inst ; 3.523 ; 3.523 ; Rise       ; maquina:inst|inst ;
+;  LEDR[17] ; maquina:inst|inst ; 3.468 ; 3.468 ; Rise       ; maquina:inst|inst ;
+; HEX0[*]   ; maquina:inst|inst ; 3.987 ; 3.987 ; Fall       ; maquina:inst|inst ;
+;  HEX0[0]  ; maquina:inst|inst ; 4.112 ; 4.112 ; Fall       ; maquina:inst|inst ;
+;  HEX0[1]  ; maquina:inst|inst ; 4.073 ; 4.073 ; Fall       ; maquina:inst|inst ;
+;  HEX0[2]  ; maquina:inst|inst ; 4.079 ; 4.079 ; Fall       ; maquina:inst|inst ;
+;  HEX0[3]  ; maquina:inst|inst ; 4.003 ; 4.003 ; Fall       ; maquina:inst|inst ;
+;  HEX0[4]  ; maquina:inst|inst ; 3.987 ; 3.987 ; Fall       ; maquina:inst|inst ;
+;  HEX0[5]  ; maquina:inst|inst ; 3.994 ; 3.994 ; Fall       ; maquina:inst|inst ;
+;  HEX0[6]  ; maquina:inst|inst ; 3.989 ; 3.989 ; Fall       ; maquina:inst|inst ;
+; HEX1[*]   ; maquina:inst|inst ; 5.429 ; 5.429 ; Fall       ; maquina:inst|inst ;
+;  HEX1[0]  ; maquina:inst|inst ; 5.574 ; 5.574 ; Fall       ; maquina:inst|inst ;
+;  HEX1[1]  ; maquina:inst|inst ; 5.548 ; 5.548 ; Fall       ; maquina:inst|inst ;
+;  HEX1[2]  ; maquina:inst|inst ; 5.537 ; 5.537 ; Fall       ; maquina:inst|inst ;
+;  HEX1[3]  ; maquina:inst|inst ; 5.573 ; 5.573 ; Fall       ; maquina:inst|inst ;
+;  HEX1[4]  ; maquina:inst|inst ; 5.429 ; 5.429 ; Fall       ; maquina:inst|inst ;
+;  HEX1[5]  ; maquina:inst|inst ; 5.554 ; 5.554 ; Fall       ; maquina:inst|inst ;
+;  HEX1[6]  ; maquina:inst|inst ; 5.578 ; 5.578 ; Fall       ; maquina:inst|inst ;
+; HEX2[*]   ; maquina:inst|inst ; 4.005 ; 4.005 ; Fall       ; maquina:inst|inst ;
+;  HEX2[0]  ; maquina:inst|inst ; 4.131 ; 4.131 ; Fall       ; maquina:inst|inst ;
+;  HEX2[1]  ; maquina:inst|inst ; 4.114 ; 4.114 ; Fall       ; maquina:inst|inst ;
+;  HEX2[2]  ; maquina:inst|inst ; 4.154 ; 4.154 ; Fall       ; maquina:inst|inst ;
+;  HEX2[3]  ; maquina:inst|inst ; 4.164 ; 4.164 ; Fall       ; maquina:inst|inst ;
+;  HEX2[4]  ; maquina:inst|inst ; 4.015 ; 4.015 ; Fall       ; maquina:inst|inst ;
+;  HEX2[5]  ; maquina:inst|inst ; 4.015 ; 4.015 ; Fall       ; maquina:inst|inst ;
+;  HEX2[6]  ; maquina:inst|inst ; 4.005 ; 4.005 ; Fall       ; maquina:inst|inst ;
+; LEDG[*]   ; maquina:inst|inst ; 4.054 ; 4.054 ; Fall       ; maquina:inst|inst ;
+;  LEDG[0]  ; maquina:inst|inst ; 4.324 ; 4.324 ; Fall       ; maquina:inst|inst ;
+;  LEDG[1]  ; maquina:inst|inst ; 4.054 ; 4.054 ; Fall       ; maquina:inst|inst ;
+; LEDR[*]   ; maquina:inst|inst ;       ; 2.719 ; Fall       ; maquina:inst|inst ;
+;  LEDR[0]  ; maquina:inst|inst ;       ; 2.719 ; Fall       ; maquina:inst|inst ;
++-----------+-------------------+-------+-------+------------+-------------------+
+
+
++--------------------------------------------------------------+
+; Progagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; KEY[0]     ; HEX0[0]     ; 27.615 ; 27.615 ; 27.615 ; 27.615 ;
+; KEY[0]     ; HEX0[1]     ; 27.568 ; 27.568 ; 27.568 ; 27.568 ;
+; KEY[0]     ; HEX0[2]     ; 27.546 ; 27.546 ; 27.546 ; 27.546 ;
+; KEY[0]     ; HEX0[3]     ; 27.376 ; 27.376 ; 27.376 ; 27.376 ;
+; KEY[0]     ; HEX0[4]     ; 27.353 ; 27.353 ; 27.353 ; 27.353 ;
+; KEY[0]     ; HEX0[5]     ; 27.331 ; 27.331 ; 27.331 ; 27.331 ;
+; KEY[0]     ; HEX0[6]     ; 27.365 ; 27.365 ; 27.365 ; 27.365 ;
+; KEY[0]     ; HEX1[0]     ; 45.210 ; 45.210 ; 45.210 ; 45.210 ;
+; KEY[0]     ; HEX1[1]     ; 45.173 ; 45.173 ; 45.173 ; 45.173 ;
+; KEY[0]     ; HEX1[2]     ; 45.288 ; 45.288 ; 45.288 ; 45.288 ;
+; KEY[0]     ; HEX1[3]     ; 45.337 ; 45.337 ; 45.337 ; 45.337 ;
+; KEY[0]     ; HEX1[4]     ; 45.030 ; 45.030 ; 45.030 ; 45.030 ;
+; KEY[0]     ; HEX1[5]     ; 45.313 ; 45.313 ; 45.313 ; 45.313 ;
+; KEY[0]     ; HEX1[6]     ; 45.338 ; 45.338 ; 45.338 ; 45.338 ;
+; KEY[0]     ; HEX2[0]     ; 14.399 ;        ;        ; 14.399 ;
+; KEY[0]     ; HEX2[1]     ; 14.391 ;        ;        ; 14.391 ;
+; KEY[0]     ; HEX2[2]     ; 14.431 ;        ;        ; 14.431 ;
+; KEY[0]     ; HEX2[3]     ; 14.441 ;        ;        ; 14.441 ;
+; KEY[0]     ; HEX2[4]     ; 14.135 ;        ;        ; 14.135 ;
+; KEY[0]     ; HEX2[5]     ; 14.135 ;        ;        ; 14.135 ;
+; KEY[0]     ; HEX2[6]     ;        ; 14.125 ; 14.125 ;        ;
+; KEY[0]     ; LEDG[2]     ; 9.724  ;        ;        ; 9.724  ;
+; SW[0]      ; LEDG[8]     ; 9.719  ; 11.699 ; 11.699 ; 9.719  ;
+; SW[0]      ; LEDR[6]     ;        ; 12.057 ; 12.057 ;        ;
+; SW[0]      ; LEDR[7]     ;        ; 12.219 ; 12.219 ;        ;
+; SW[0]      ; LEDR[8]     ;        ; 10.966 ; 10.966 ;        ;
+; SW[0]      ; LEDR[9]     ;        ; 10.939 ; 10.939 ;        ;
+; SW[1]      ; LEDG[8]     ; 9.476  ; 12.029 ; 12.029 ; 9.476  ;
+; SW[1]      ; LEDR[6]     ; 9.971  ; 11.627 ; 11.627 ; 9.971  ;
+; SW[1]      ; LEDR[7]     ;        ; 12.705 ; 12.705 ;        ;
+; SW[1]      ; LEDR[8]     ;        ; 10.536 ; 10.536 ;        ;
+; SW[1]      ; LEDR[9]     ;        ; 10.509 ; 10.509 ;        ;
+; SW[2]      ; LEDG[8]     ; 9.580  ; 11.266 ; 11.266 ; 9.580  ;
+; SW[2]      ; LEDR[6]     ;        ; 11.332 ; 11.332 ;        ;
+; SW[2]      ; LEDR[7]     ; 10.256 ; 11.942 ; 11.942 ; 10.256 ;
+; SW[2]      ; LEDR[8]     ;        ; 10.241 ; 10.241 ;        ;
+; SW[2]      ; LEDR[9]     ;        ; 10.214 ; 10.214 ;        ;
+; SW[3]      ; LEDG[8]     ; 7.711  ; 11.879 ; 11.879 ; 7.711  ;
+; SW[3]      ; LEDR[6]     ; 8.206  ; 12.237 ; 12.237 ; 8.206  ;
+; SW[3]      ; LEDR[7]     ; 7.885  ; 12.199 ; 12.199 ; 7.885  ;
+; SW[3]      ; LEDR[8]     ;        ; 11.146 ; 11.146 ;        ;
+; SW[3]      ; LEDR[9]     ;        ; 11.119 ; 11.119 ;        ;
+; SW[4]      ; LEDG[8]     ; 7.313  ; 10.946 ; 10.946 ; 7.313  ;
+; SW[4]      ; LEDR[6]     ;        ; 11.304 ; 11.304 ;        ;
+; SW[4]      ; LEDR[7]     ;        ; 11.266 ; 11.266 ;        ;
+; SW[4]      ; LEDR[8]     ; 6.580  ; 10.213 ; 10.213 ; 6.580  ;
+; SW[4]      ; LEDR[9]     ;        ; 10.186 ; 10.186 ;        ;
+; SW[5]      ; LEDG[8]     ; 8.449  ; 11.965 ; 11.965 ; 8.449  ;
+; SW[5]      ; LEDR[6]     ; 8.944  ; 12.323 ; 12.323 ; 8.944  ;
+; SW[5]      ; LEDR[7]     ;        ; 12.285 ; 12.285 ;        ;
+; SW[5]      ; LEDR[8]     ; 8.013  ; 11.232 ; 11.232 ; 8.013  ;
+; SW[5]      ; LEDR[9]     ;        ; 11.205 ; 11.205 ;        ;
+; SW[6]      ; LEDG[8]     ; 9.583  ; 11.726 ; 11.726 ; 9.583  ;
+; SW[6]      ; LEDR[6]     ;        ; 12.084 ; 12.084 ;        ;
+; SW[6]      ; LEDR[7]     ; 10.259 ; 12.046 ; 12.046 ; 10.259 ;
+; SW[6]      ; LEDR[8]     ; 8.002  ; 10.993 ; 10.993 ; 8.002  ;
+; SW[6]      ; LEDR[9]     ;        ; 10.966 ; 10.966 ;        ;
+; SW[7]      ; LEDG[8]     ; 10.326 ; 11.587 ; 11.587 ; 10.326 ;
+; SW[7]      ; LEDR[6]     ; 10.821 ; 11.945 ; 11.945 ; 10.821 ;
+; SW[7]      ; LEDR[7]     ; 10.500 ; 11.907 ; 11.907 ; 10.500 ;
+; SW[7]      ; LEDR[8]     ; 8.546  ; 10.854 ; 10.854 ; 8.546  ;
+; SW[7]      ; LEDR[9]     ;        ; 10.827 ; 10.827 ;        ;
+; SW[8]      ; LEDG[8]     ; 8.878  ; 12.011 ; 12.011 ; 8.878  ;
+; SW[8]      ; LEDR[6]     ;        ; 11.569 ; 11.569 ;        ;
+; SW[8]      ; LEDR[7]     ;        ; 12.687 ; 12.687 ;        ;
+; SW[8]      ; LEDR[8]     ;        ; 10.430 ; 10.430 ;        ;
+; SW[8]      ; LEDR[9]     ; 8.156  ; 10.231 ; 10.231 ; 8.156  ;
+; SW[9]      ; LEDG[8]     ; 10.103 ; 12.909 ; 12.909 ; 10.103 ;
+; SW[9]      ; LEDR[6]     ; 10.598 ; 12.467 ; 12.467 ; 10.598 ;
+; SW[9]      ; LEDR[7]     ;        ; 13.585 ; 13.585 ;        ;
+; SW[9]      ; LEDR[8]     ;        ; 11.328 ; 11.328 ;        ;
+; SW[9]      ; LEDR[9]     ; 9.480  ; 9.892  ; 9.892  ; 9.480  ;
+; SW[10]     ; LEDG[8]     ; 10.089 ; 12.444 ; 12.444 ; 10.089 ;
+; SW[10]     ; LEDR[6]     ;        ; 12.002 ; 12.002 ;        ;
+; SW[10]     ; LEDR[7]     ; 10.765 ; 13.120 ; 13.120 ; 10.765 ;
+; SW[10]     ; LEDR[8]     ;        ; 10.863 ; 10.863 ;        ;
+; SW[10]     ; LEDR[9]     ; 9.105  ; 9.791  ; 9.791  ; 9.105  ;
+; SW[11]     ; LEDG[8]     ; 10.080 ; 13.716 ; 13.716 ; 10.080 ;
+; SW[11]     ; LEDR[6]     ; 10.575 ; 13.274 ; 13.274 ; 10.575 ;
+; SW[11]     ; LEDR[7]     ; 10.219 ; 14.392 ; 14.392 ; 10.219 ;
+; SW[11]     ; LEDR[8]     ;        ; 12.135 ; 12.135 ;        ;
+; SW[11]     ; LEDR[9]     ; 9.457  ; 10.395 ; 10.395 ; 9.457  ;
+; SW[12]     ; LEDG[8]     ; 9.825  ; 13.055 ; 13.055 ; 9.825  ;
+; SW[12]     ; LEDR[6]     ;        ; 12.613 ; 12.613 ;        ;
+; SW[12]     ; LEDR[7]     ;        ; 13.731 ; 13.731 ;        ;
+; SW[12]     ; LEDR[8]     ; 9.092  ; 11.474 ; 11.474 ; 9.092  ;
+; SW[12]     ; LEDR[9]     ; 8.263  ; 9.758  ; 9.758  ; 8.263  ;
+; SW[13]     ; LEDG[8]     ; 13.564 ; 17.026 ; 17.026 ; 13.564 ;
+; SW[13]     ; LEDR[6]     ; 14.059 ; 16.584 ; 16.584 ; 14.059 ;
+; SW[13]     ; LEDR[7]     ;        ; 17.702 ; 17.702 ;        ;
+; SW[13]     ; LEDR[8]     ; 12.920 ; 15.445 ; 15.445 ; 12.920 ;
+; SW[13]     ; LEDR[9]     ; 12.941 ; 13.705 ; 13.705 ; 12.941 ;
+; SW[14]     ; LEDG[8]     ; 13.461 ; 17.316 ; 17.316 ; 13.461 ;
+; SW[14]     ; LEDR[6]     ;        ; 16.874 ; 16.874 ;        ;
+; SW[14]     ; LEDR[7]     ; 14.137 ; 17.992 ; 17.992 ; 14.137 ;
+; SW[14]     ; LEDR[8]     ; 12.190 ; 15.735 ; 15.735 ; 12.190 ;
+; SW[14]     ; LEDR[9]     ; 12.477 ; 13.995 ; 13.995 ; 12.477 ;
+; SW[15]     ; LEDG[8]     ; 13.961 ; 16.614 ; 16.614 ; 13.961 ;
+; SW[15]     ; LEDR[6]     ; 14.456 ; 16.172 ; 16.172 ; 14.456 ;
+; SW[15]     ; LEDR[7]     ; 14.090 ; 17.290 ; 17.290 ; 14.090 ;
+; SW[15]     ; LEDR[8]     ; 13.391 ; 15.033 ; 15.033 ; 13.391 ;
+; SW[15]     ; LEDR[9]     ; 13.338 ; 13.541 ; 13.541 ; 13.338 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------+
+; Minimum Progagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; KEY[0]     ; HEX0[0]     ; 7.716 ; 7.716 ; 7.716 ; 7.716 ;
+; KEY[0]     ; HEX0[1]     ; 7.677 ; 7.677 ; 7.677 ; 7.677 ;
+; KEY[0]     ; HEX0[2]     ; 8.049 ; 7.683 ; 7.683 ; 8.049 ;
+; KEY[0]     ; HEX0[3]     ; 7.607 ; 7.607 ; 7.607 ; 7.607 ;
+; KEY[0]     ; HEX0[4]     ; 7.591 ; 7.957 ; 7.957 ; 7.591 ;
+; KEY[0]     ; HEX0[5]     ; 7.598 ; 7.964 ; 7.964 ; 7.598 ;
+; KEY[0]     ; HEX0[6]     ; 7.593 ; 7.593 ; 7.593 ; 7.593 ;
+; KEY[0]     ; HEX1[0]     ; 9.178 ; 9.178 ; 9.178 ; 9.178 ;
+; KEY[0]     ; HEX1[1]     ; 9.152 ; 9.152 ; 9.152 ; 9.152 ;
+; KEY[0]     ; HEX1[2]     ; 9.141 ; 9.141 ; 9.141 ; 9.141 ;
+; KEY[0]     ; HEX1[3]     ; 9.177 ; 9.177 ; 9.177 ; 9.177 ;
+; KEY[0]     ; HEX1[4]     ; 9.033 ; 9.033 ; 9.033 ; 9.033 ;
+; KEY[0]     ; HEX1[5]     ; 9.158 ; 9.158 ; 9.158 ; 9.158 ;
+; KEY[0]     ; HEX1[6]     ; 9.182 ; 9.182 ; 9.182 ; 9.182 ;
+; KEY[0]     ; HEX2[0]     ; 7.740 ;       ;       ; 7.740 ;
+; KEY[0]     ; HEX2[1]     ; 7.723 ;       ;       ; 7.723 ;
+; KEY[0]     ; HEX2[2]     ; 7.763 ;       ;       ; 7.763 ;
+; KEY[0]     ; HEX2[3]     ; 7.773 ;       ;       ; 7.773 ;
+; KEY[0]     ; HEX2[4]     ; 7.624 ;       ;       ; 7.624 ;
+; KEY[0]     ; HEX2[5]     ; 7.624 ;       ;       ; 7.624 ;
+; KEY[0]     ; HEX2[6]     ;       ; 7.614 ; 7.614 ;       ;
+; KEY[0]     ; LEDG[2]     ; 5.592 ;       ;       ; 5.592 ;
+; SW[0]      ; LEDG[8]     ; 4.937 ; 4.964 ; 4.964 ; 4.937 ;
+; SW[0]      ; LEDR[6]     ;       ; 5.203 ; 5.203 ;       ;
+; SW[0]      ; LEDR[7]     ;       ; 5.227 ; 5.227 ;       ;
+; SW[0]      ; LEDR[8]     ;       ; 4.314 ; 4.314 ;       ;
+; SW[0]      ; LEDR[9]     ;       ; 4.720 ; 4.720 ;       ;
+; SW[1]      ; LEDG[8]     ; 4.784 ; 4.865 ; 4.865 ; 4.784 ;
+; SW[1]      ; LEDR[6]     ; 5.023 ; 5.424 ; 5.424 ; 5.023 ;
+; SW[1]      ; LEDR[7]     ;       ; 5.190 ; 5.190 ;       ;
+; SW[1]      ; LEDR[8]     ;       ; 4.483 ; 4.483 ;       ;
+; SW[1]      ; LEDR[9]     ;       ; 4.538 ; 4.538 ;       ;
+; SW[2]      ; LEDG[8]     ; 4.813 ; 4.641 ; 4.641 ; 4.813 ;
+; SW[2]      ; LEDR[6]     ;       ; 4.880 ; 4.880 ;       ;
+; SW[2]      ; LEDR[7]     ; 5.123 ; 5.074 ; 5.074 ; 5.123 ;
+; SW[2]      ; LEDR[8]     ;       ; 4.161 ; 4.161 ;       ;
+; SW[2]      ; LEDR[9]     ;       ; 4.399 ; 4.399 ;       ;
+; SW[3]      ; LEDG[8]     ; 3.932 ; 4.089 ; 4.089 ; 3.932 ;
+; SW[3]      ; LEDR[6]     ; 4.171 ; 4.419 ; 4.419 ; 4.171 ;
+; SW[3]      ; LEDR[7]     ; 4.015 ; 5.120 ; 5.120 ; 4.015 ;
+; SW[3]      ; LEDR[8]     ;       ; 3.752 ; 3.752 ;       ;
+; SW[3]      ; LEDR[9]     ;       ; 4.720 ; 4.720 ;       ;
+; SW[4]      ; LEDG[8]     ; 3.726 ; 3.924 ; 3.924 ; 3.726 ;
+; SW[4]      ; LEDR[6]     ;       ; 4.163 ; 4.163 ;       ;
+; SW[4]      ; LEDR[7]     ;       ; 4.230 ; 4.230 ;       ;
+; SW[4]      ; LEDR[8]     ; 3.389 ; 3.689 ; 3.689 ; 3.389 ;
+; SW[4]      ; LEDR[9]     ;       ; 4.301 ; 4.301 ;       ;
+; SW[5]      ; LEDG[8]     ; 4.241 ; 4.148 ; 4.148 ; 4.241 ;
+; SW[5]      ; LEDR[6]     ; 4.480 ; 4.395 ; 4.395 ; 4.480 ;
+; SW[5]      ; LEDR[7]     ;       ; 4.239 ; 4.239 ;       ;
+; SW[5]      ; LEDR[8]     ; 4.006 ; 3.811 ; 3.811 ; 4.006 ;
+; SW[5]      ; LEDR[9]     ;       ; 4.779 ; 4.779 ;       ;
+; SW[6]      ; LEDG[8]     ; 4.767 ; 3.826 ; 3.826 ; 4.767 ;
+; SW[6]      ; LEDR[6]     ;       ; 4.065 ; 4.065 ;       ;
+; SW[6]      ; LEDR[7]     ; 5.077 ; 4.128 ; 4.128 ; 5.077 ;
+; SW[6]      ; LEDR[8]     ; 4.008 ; 3.591 ; 3.591 ; 4.008 ;
+; SW[6]      ; LEDR[9]     ;       ; 4.665 ; 4.665 ;       ;
+; SW[7]      ; LEDG[8]     ; 5.275 ; 4.911 ; 4.911 ; 5.275 ;
+; SW[7]      ; LEDR[6]     ; 5.514 ; 5.189 ; 5.189 ; 5.514 ;
+; SW[7]      ; LEDR[7]     ; 5.358 ; 5.321 ; 5.321 ; 5.358 ;
+; SW[7]      ; LEDR[8]     ; 4.445 ; 4.576 ; 4.576 ; 4.445 ;
+; SW[7]      ; LEDR[9]     ;       ; 4.706 ; 4.706 ;       ;
+; SW[8]      ; LEDG[8]     ; 4.651 ; 4.951 ; 4.951 ; 4.651 ;
+; SW[8]      ; LEDR[6]     ;       ; 5.207 ; 5.207 ;       ;
+; SW[8]      ; LEDR[7]     ;       ; 5.253 ; 5.253 ;       ;
+; SW[8]      ; LEDR[8]     ;       ; 4.554 ; 4.554 ;       ;
+; SW[8]      ; LEDR[9]     ; 4.324 ; 4.840 ; 4.840 ; 4.324 ;
+; SW[9]      ; LEDG[8]     ; 5.119 ; 4.995 ; 4.995 ; 5.119 ;
+; SW[9]      ; LEDR[6]     ; 5.358 ; 5.265 ; 5.265 ; 5.358 ;
+; SW[9]      ; LEDR[7]     ;       ; 5.085 ; 5.085 ;       ;
+; SW[9]      ; LEDR[8]     ;       ; 4.624 ; 4.624 ;       ;
+; SW[9]      ; LEDR[9]     ; 4.839 ; 4.668 ; 4.668 ; 4.839 ;
+; SW[10]     ; LEDG[8]     ; 5.107 ; 4.818 ; 4.818 ; 5.107 ;
+; SW[10]     ; LEDR[6]     ;       ; 5.194 ; 5.194 ;       ;
+; SW[10]     ; LEDR[7]     ; 5.417 ; 5.014 ; 5.014 ; 5.417 ;
+; SW[10]     ; LEDR[8]     ;       ; 4.556 ; 4.556 ;       ;
+; SW[10]     ; LEDR[9]     ; 4.664 ; 4.491 ; 4.491 ; 4.664 ;
+; SW[11]     ; LEDG[8]     ; 5.069 ; 4.903 ; 4.903 ; 5.069 ;
+; SW[11]     ; LEDR[6]     ; 5.308 ; 5.340 ; 5.340 ; 5.308 ;
+; SW[11]     ; LEDR[7]     ; 5.131 ; 5.213 ; 5.213 ; 5.131 ;
+; SW[11]     ; LEDR[8]     ;       ; 4.344 ; 4.344 ;       ;
+; SW[11]     ; LEDR[9]     ; 4.789 ; 4.402 ; 4.402 ; 4.789 ;
+; SW[12]     ; LEDG[8]     ; 4.961 ; 4.756 ; 4.756 ; 4.961 ;
+; SW[12]     ; LEDR[6]     ;       ; 5.059 ; 5.059 ;       ;
+; SW[12]     ; LEDR[7]     ;       ; 4.946 ; 4.946 ;       ;
+; SW[12]     ; LEDR[8]     ; 4.624 ; 4.199 ; 4.199 ; 4.624 ;
+; SW[12]     ; LEDR[9]     ; 4.272 ; 4.313 ; 4.313 ; 4.272 ;
+; SW[13]     ; LEDG[8]     ; 7.223 ; 7.028 ; 7.028 ; 7.223 ;
+; SW[13]     ; LEDR[6]     ; 7.462 ; 7.407 ; 7.407 ; 7.462 ;
+; SW[13]     ; LEDR[7]     ;       ; 7.230 ; 7.230 ;       ;
+; SW[13]     ; LEDR[8]     ; 6.937 ; 6.469 ; 6.469 ; 6.937 ;
+; SW[13]     ; LEDR[9]     ; 6.943 ; 6.521 ; 6.521 ; 6.943 ;
+; SW[14]     ; LEDG[8]     ; 7.194 ; 7.087 ; 7.087 ; 7.194 ;
+; SW[14]     ; LEDR[6]     ;       ; 7.326 ; 7.326 ;       ;
+; SW[14]     ; LEDR[7]     ; 7.504 ; 7.218 ; 7.218 ; 7.504 ;
+; SW[14]     ; LEDR[8]     ; 6.635 ; 6.801 ; 6.801 ; 6.635 ;
+; SW[14]     ; LEDR[9]     ; 6.751 ; 6.688 ; 6.688 ; 6.751 ;
+; SW[15]     ; LEDG[8]     ; 7.430 ; 7.242 ; 7.242 ; 7.430 ;
+; SW[15]     ; LEDR[6]     ; 7.669 ; 7.560 ; 7.560 ; 7.669 ;
+; SW[15]     ; LEDR[7]     ; 7.489 ; 7.587 ; 7.587 ; 7.489 ;
+; SW[15]     ; LEDR[8]     ; 7.138 ; 6.834 ; 6.834 ; 7.138 ;
+; SW[15]     ; LEDR[9]     ; 7.150 ; 6.882 ; 6.882 ; 7.150 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++--------------------------------------------------------------------------+
+; Setup Transfers                                                          ;
++-------------------+----------+----------+----------+----------+----------+
+; From Clock        ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------+----------+----------+----------+----------+----------+
+; CLOCK_50          ; CLOCK_50 ; 2        ; 0        ; 0        ; 0        ;
+; maquina:inst|inst ; CLOCK_50 ; 3        ; 3        ; 0        ; 0        ;
++-------------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++--------------------------------------------------------------------------+
+; Hold Transfers                                                           ;
++-------------------+----------+----------+----------+----------+----------+
+; From Clock        ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------+----------+----------+----------+----------+----------+
+; CLOCK_50          ; CLOCK_50 ; 2        ; 0        ; 0        ; 0        ;
+; maquina:inst|inst ; CLOCK_50 ; 3        ; 3        ; 0        ; 0        ;
++-------------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 17    ; 17   ;
+; Unconstrained Input Port Paths  ; 357   ; 357  ;
+; Unconstrained Output Ports      ; 53    ; 53   ;
+; Unconstrained Output Port Paths ; 448   ; 448  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Feb 14 09:18:20 2023
+Info: Command: quartus_sta projeto_final -c projeto_final
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 13 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'projeto_final.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name maquina:inst|inst maquina:inst|inst
+    Info (332105): create_clock -period 1.000 -name CLOCK_50 CLOCK_50
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.185
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.185        -0.185 CLOCK_50 
+Info (332146): Worst-case hold slack is -3.303
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.303        -6.432 CLOCK_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -3.380 CLOCK_50 
+    Info (332119):     0.500         0.000 maquina:inst|inst 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 0.456
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.456         0.000 CLOCK_50 
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case hold slack is -1.801
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.801        -3.554 CLOCK_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -3.380 CLOCK_50 
+    Info (332119):     0.500         0.000 maquina:inst|inst 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 488 megabytes
+    Info: Processing ended: Tue Feb 14 09:18:21 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

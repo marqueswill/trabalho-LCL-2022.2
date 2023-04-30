@@ -1,0 +1,12 @@
+module separador(
+input logic [7:0] valor,
+output logic [3:0] decimal,
+output logic [3:0] unidade);
+
+assign unidade = 8'd0
+while (valor > 8'd9) begin 
+	valor <= valor-8'd10;
+	unidade <= unidade+8'd1
+end
+
+endmodule

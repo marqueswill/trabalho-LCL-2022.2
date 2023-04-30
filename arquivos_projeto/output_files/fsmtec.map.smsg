@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at ROM.v(27): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at operador.v(18): always construct contains both blocking and non-blocking assignments

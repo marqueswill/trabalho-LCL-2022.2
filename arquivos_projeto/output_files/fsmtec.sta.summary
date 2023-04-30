@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'maquina:inst|ROM:inst1|E'
+Slack : -6.284
+TNS   : -45.106
+
+Type  : Slow Model Setup 'maquina:inst|inst'
+Slack : -5.354
+TNS   : -33.814
+
+Type  : Slow Model Setup 'CLOCK_50'
+Slack : -3.796
+TNS   : -395.465
+
+Type  : Slow Model Setup 'KEY[0]'
+Slack : 2.587
+TNS   : 0.000
+
+Type  : Slow Model Hold 'KEY[0]'
+Slack : -2.961
+TNS   : -2.961
+
+Type  : Slow Model Hold 'CLOCK_50'
+Slack : -2.714
+TNS   : -5.233
+
+Type  : Slow Model Hold 'maquina:inst|inst'
+Slack : -0.675
+TNS   : -0.675
+
+Type  : Slow Model Hold 'maquina:inst|ROM:inst1|E'
+Slack : -0.669
+TNS   : -2.174
+
+Type  : Slow Model Recovery 'maquina:inst|inst'
+Slack : -2.915
+TNS   : -13.098
+
+Type  : Slow Model Recovery 'maquina:inst|ROM:inst1|E'
+Slack : -2.140
+TNS   : -14.253
+
+Type  : Slow Model Recovery 'CLOCK_50'
+Slack : -0.758
+TNS   : -0.854
+
+Type  : Slow Model Removal 'maquina:inst|ROM:inst1|E'
+Slack : -2.395
+TNS   : -17.807
+
+Type  : Slow Model Removal 'maquina:inst|inst'
+Slack : -0.770
+TNS   : -4.020
+
+Type  : Slow Model Removal 'CLOCK_50'
+Slack : 0.366
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -131.380
+
+Type  : Slow Model Minimum Pulse Width 'KEY[0]'
+Slack : -1.222
+TNS   : -1.222
+
+Type  : Slow Model Minimum Pulse Width 'maquina:inst|ROM:inst1|E'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'maquina:inst|inst'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'maquina:inst|inst'
+Slack : -2.386
+TNS   : -10.406
+
+Type  : Fast Model Setup 'maquina:inst|ROM:inst1|E'
+Slack : -2.355
+TNS   : -17.010
+
+Type  : Fast Model Setup 'CLOCK_50'
+Slack : -1.291
+TNS   : -124.865
+
+Type  : Fast Model Setup 'KEY[0]'
+Slack : 1.698
+TNS   : 0.000
+
+Type  : Fast Model Hold 'CLOCK_50'
+Slack : -1.564
+TNS   : -3.083
+
+Type  : Fast Model Hold 'KEY[0]'
+Slack : -1.560
+TNS   : -1.560
+
+Type  : Fast Model Hold 'maquina:inst|ROM:inst1|E'
+Slack : -0.604
+TNS   : -3.437
+
+Type  : Fast Model Hold 'maquina:inst|inst'
+Slack : -0.304
+TNS   : -0.304
+
+Type  : Fast Model Recovery 'maquina:inst|inst'
+Slack : -1.270
+TNS   : -4.672
+
+Type  : Fast Model Recovery 'maquina:inst|ROM:inst1|E'
+Slack : -0.673
+TNS   : -4.050
+
+Type  : Fast Model Recovery 'CLOCK_50'
+Slack : 0.021
+TNS   : 0.000
+
+Type  : Fast Model Removal 'maquina:inst|ROM:inst1|E'
+Slack : -1.365
+TNS   : -10.294
+
+Type  : Fast Model Removal 'maquina:inst|inst'
+Slack : -0.395
+TNS   : -2.339
+
+Type  : Fast Model Removal 'CLOCK_50'
+Slack : 0.224
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -131.380
+
+Type  : Fast Model Minimum Pulse Width 'KEY[0]'
+Slack : -1.222
+TNS   : -1.222
+
+Type  : Fast Model Minimum Pulse Width 'maquina:inst|ROM:inst1|E'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'maquina:inst|inst'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,38 @@
+module operacao(
+input  logic KEY[3:0],
+output logic OP,
+output logic E);
+
+reg operador[3:0];
+
+
+
+always @(KEY)
+	begin
+		operador <= 4'b0000;
+		
+		if (KEY[3])
+			begin
+				operador <= 4'b1010;
+				E <= 0;
+			end
+		
+		if (KEY[2])
+			begin
+				operador <= 4'b1011;
+				E <= 0;
+			end
+		
+		if (KEY[1])
+			begin
+				operador <= 4'b1100;
+				E <= 0;
+			end
+		
+		if (KEY[0])
+			if (operador != 4'b0000)
+				begin
+					E <= 1;
+				end
+			else 
+	end
